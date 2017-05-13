@@ -1,0 +1,120 @@
+.screening {
+	padding:0 8px;
+	background:#fff;
+	color:#333
+}
+.screening .selector {
+	line-height:24px;
+	margin:0 0 8px 0;
+	height:24px;
+	overflow:hidden;
+	padding-top:8px
+}
+.screening .sline {
+	height:1px;
+	background:#ececec
+}
+.screening .selector .key {
+	float:left;
+	width:73px;
+	padding-right:14px;
+	font-weight:bold;
+	text-align:right
+}
+.screening .selector .contenter {
+	float:left;
+	width:897px;
+	line-height:24px
+}
+.screening .selector .contenter .smore {
+	float:right;
+	background:url(../images/more_1.gif) no-repeat;
+	width:60px;
+	height:24px;
+	cursor:pointer
+}
+.screening .selector .contenter .more2 {
+	background:url(../images/more_2.gif) no-repeat
+}
+.screening .selector .contenter a {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	margin-right:5px;
+	padding:0 20px 0 10px
+}
+.screening .selector .contenter .k0 a {
+	width:125px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis
+}
+.screening .selector .contenter .kcon {
+	display:inline
+}
+.screening .selector .contenter .kcon a:hover {
+	color:#ff69b4
+}
+.screening .selector .contenter .kcon a.hovercur {
+	color:#ff69b4;
+	cursor:pointer
+}
+.screening .selector .contenter .kcon a.current {
+	background:url(../images/close.gif) no-repeat right center #ff69b4;
+	color:#fff
+}
+.crumbs {
+	height:38px;
+	line-height:38px
+}
+.BrandIntro {
+	background:#fff;
+	margin-bottom:14px
+}
+.BrandIntro .left,.BrandIntro .right {
+	width:167px;
+	float:left;
+	display:inline
+}
+.BrandIntro .right {
+	width:833px
+}
+.BrandIntro .left {
+	text-align:center;
+	padding-top:24px
+}
+.BrandIntro .right .intro {
+	color:#999;
+	line-height:20px
+}
+.BrandIntro .right .top {
+	height:42px;
+	line-height:42px;
+	color:#333
+}
+.BrandIntro .right .top span,.BrandIntro .right .top img {
+	float:left
+}
+.BrandIntro .right .top span.name {
+	color:#ff69b4;
+	font-size:24px;
+	font-family:\5FAE\8F6F\96C5\9ED1
+}
+.BrandIntro .right .top img {
+	margin:9px 11px 0 6px;
+	cursor:pointer
+}
+.searchEmpty {
+	height:74px;
+	line-height:74px;
+	background:url(../images/searchEmpty.gif) no-repeat 28px 7px #fff;
+	width:894px;
+	margin:0 auto;
+	font-size:14px;
+	color:#333;
+	padding-left:106px
+}
+.searchEmpty span.red {
+	color:red;
+	font-weight:bold
+}

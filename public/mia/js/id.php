@@ -1,0 +1,1 @@
+try{_gnayTrack.creElm({src:"http://fg.jiathis.com/cm.js?p=3752&k=B699A0CCE5009DE9&g=b961bc41340342b190f01bdb69f65f55&lp=http%3A%2F%2Flocal.naiya.cc%2Fitem-1076410.html&ti=&rf=http%3A%2F%2Flocal.naiya.cc%2FformulasList%2Fb163.html", charset:"utf-8"}, "script", (document.getElementsByTagName("head")[0] || document.documentElement));}catch(e){};

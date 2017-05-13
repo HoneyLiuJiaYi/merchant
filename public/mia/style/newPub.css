@@ -1,0 +1,136 @@
+body,div,dl,dt,dd,ul,li,p,h1,h2,h3,h4,h5,input,img,form {
+	margin:0;
+	padding:0
+}
+body {
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#333
+}
+input {
+	font-size:12px;
+	font-family:inherit
+}
+li {
+	list-style-type:none
+}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+.clearfix {
+	zoom:1
+}
+.clear {
+	width:100%;
+	height:1px;
+	font-size:1px;
+	clear:both
+}
+a img {
+	border:0
+}
+a {
+	text-decoration:none;
+	color:#666
+}
+a:hover {
+	color:#d80056
+}
+em,i {
+	font-style:normal
+}
+.unline:hover {
+	text-decoration:underline
+}
+a:hover {
+	text-decoration:none;
+	color:#fc62af
+}
+.l {
+	float:left;
+	display:inline
+}
+.r {
+	float:right;
+	display:inline
+}
+.rel {
+	position:relative
+}
+.pos {
+	position:absolute
+}
+.mr0 {
+	margin-right:0
+}
+.blod {
+	font-weight:bold
+}
+.dn {
+	display:none
+}
+.red {
+	color:red
+}
+.pink {
+	color:#f450a2
+}
+.f12 {
+	font-size:12px
+}
+.a1 {
+	color:#333
+}
+.a2 {
+	color:#
+}
+.gray2 {
+	color:#ccc
+}
+.gray3 {
+	color:#999
+}
+.gray {
+	color:#858585
+}
+a.gray {
+	text-decoration:underline
+}
+a.gray:hover {
+	text-decoration:none
+}
+a.pink:hover {
+	color:#f53294;
+	text-decoration:underline
+}
+.songti {
+	font-family:\5B8B\4F53
+}
+.yahei {
+	font-family:\5FAE\8F6F\96C5\9ED1
+}
+.ver {
+	font-family:Verdana,Geneva,sans-serif
+}
+.Ari {
+	font-family:Arial,Helvetica,sans-serif
+}
+.f16 {
+	font-size:16px
+}
+.f20 {
+	font-size:20px
+}
+body {
+	_background-attachment:fixed;
+	_background-image:url(about:blank);
+	background:#f9f9f9
+}
+.w1000 {
+	width:1000px;
+	margin:0 auto
+}

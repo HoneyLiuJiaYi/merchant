@@ -1,0 +1,76 @@
+uft-8 .bfd_div {
+	width:640px;
+}
+.bfd_title {
+	font-size:16px;
+	padding-left:10px;
+	height:25px;
+	width:700px;
+	letter-spacing:0;
+	font-family:"Microsoft YaHei";
+	border-bottom:4px solid #333;
+	padding-top:5px;
+	color:#000;
+}
+.bfd_img_logo {
+	width:15px;
+	height:15px;
+	text-align:right;
+}
+.bfd_message {
+	border-top:none;
+	width:100%;
+	height:240px;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+.bfd_message ul {
+	height:240px;
+	width:100%;
+}
+.bfd_message ul li {
+	float:left;
+	width:160px;
+	margin-top:10px;
+	font-size:14px;
+	overflow:hidden;
+	margin-left:3px;
+	text-align:center;
+}
+a.bfd_img_logo {
+	float:right;
+	display:block;
+	width:101px;
+	height:13px;
+	margin:-19px 10px 0 0;
+	background:url(../images/bfd_logo_ch.png) no-repeat;
+	_background:url(../images/bfd_logo_ch.gif) no-repeat;
+	overflow:hidden;
+}
+a.bfd_img_logo:hover {
+	background:url(../images/bfd_logo_ch.png) no-repeat 0 -14px;
+	_background:url(../images/bfd_logo_ch.gif) no-repeat 0 -14px;
+}
+.bfd_img {
+	height:155px;
+	border:1px solid #ccc;
+}
+.bfd_name {
+	width:140px;
+	height:34px;
+	line-height:18px;
+	text-align:left;
+	overflow:hidden;
+	margin-top:2px;
+	font-size:13px;
+	margin-left:10px;
+	color:#666;
+}
+.bfd_prc {
+	width:140px;
+	margin-left:10px;
+	margin-top:10px;
+	text-align:left;
+	font-size:12px;
+	color:#f34fa1;
+}

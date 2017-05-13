@@ -1,0 +1,562 @@
+.col999 {
+	color:#999
+}
+.coupons {
+	position:relative;
+	clear:both;
+	background:#fff;
+	height:auto;
+	min-height:136px;
+	padding:15px;
+	border-top:1px solid #dbd7d8
+}
+.coupons .left {
+	width:63%;
+	padding-left:5px;
+	float:left
+}
+.coupons .right {
+	width:35%;
+	position:absolute;
+	bottom:10px;
+	right:0;
+	overflow:hidden;
+	padding-right:10px;
+	min-height:136px;
+	line-height:26px
+}
+.coupons .left .bindcoupon {
+	padding:5px 0;
+	line-height:22px
+}
+.coupons .left .bindcoupon a {
+	display:inline-block;
+	width:10px;
+	height:8px;
+	overflow:hidden;
+	background:url(../images/icon-f.gif) no-repeat 0 0;
+	margin:0 4px;
+	cursor:pointer
+}
+.coupons .left .bindcoupon a.t {
+	background-position:0 0
+}
+.coupons .left .bindcoupon a.b {
+	background-position:-10px 0
+}
+.coupons .left .couponlist {
+	padding:0
+}
+.adressmain {
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	border-bottom:1px solid #dadada;
+	padding-bottom:30px
+}
+.prev,.next {
+	display:block;
+	width:18px;
+	height:31px;
+	margin:20px 5px 0 5px;
+	float:left;
+	padding:50px 0 40px;
+	float:left;
+	overflow:hidden;
+	outline:0
+}
+.adressall {
+	float:left;
+	position:relative;
+	padding-top:20px;
+	width:933px;
+	height:167px;
+	overflow:hidden
+}
+.adress {
+	position:relative;
+	padding:19px 15px;
+	width:191px;
+	height:99px;
+	background:url(../images/borderbg.png) no-repeat
+}
+.adress p {
+	word-warp:break-word;
+	word-break:break-all
+}
+.adressover {
+	padding:16px 12px 11px 12px;
+	width:191px;
+	height:104px;
+	background:0;
+	border:3px solid #f95caa
+}
+.f2 {
+	padding:16px 12px 11px 12px;
+	width:191px;
+	height:104px;
+	background:0;
+	border:3px solid #f95caa
+}
+.titnew {
+	width:950px;
+	padding-left:10px;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:20px
+}
+.phone {
+	float:right;
+	padding-right:8px
+}
+.default {
+	line-height:20px
+}
+.area {
+	padding:13px 0;
+	clear:both
+}
+.adress .adr1,.tplDetail {
+	display:block;
+	height:30px;
+	overflow:hidden
+}
+.Name {
+	float:left
+}
+.addnewadress {
+	font-weight:normal;
+	font-size:12px;
+	cursor:pointer;
+	float:right
+}
+.editor {
+	display:none
+}
+.defaultRad,.curRadio {
+	display:none
+}
+.adressover .editor {
+	display:block
+}
+.tplName,.tplNameN1 {
+	float:left;
+	max-width:64px;
+	height:16px;
+	line-height:16px;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden
+}
+.span1 {
+	margin-left:7px;
+	float:left;
+	height:16px;
+	line-height:16px;
+	display:inline-block;
+	*display:inline;
+	zoom:1
+}
+.editor {
+	word-wrap:break-word;
+	height:25px;
+	padding-top:7px;
+	padding-right:5px
+}
+.editor a {
+	color:#5e77b9;
+	float:right;
+	margin-right:5px
+}
+.editor a:hover {
+	color:#fc62af
+}
+.moren {
+	float:right;
+	display:none
+}
+.adresssure {
+	position:absolute;
+	bottom:-5px;
+	z-index:10;
+	right:-4px;
+	display:none
+}
+.f2 .adresssure {
+	display:block
+}
+.adress_default .moren {
+	display:block
+}
+.adressover.adress_default .szmr {
+	display:none
+}
+.payway {
+	background:#fff;
+	height:auto;
+	overflow:hidden;
+	padding:20px 0 20px 20px
+}
+.tip2 {
+	border:1px solid #dadada;
+	border-top:0;
+	width:978px
+}
+.payway .tit strong {
+	font-size:14px
+}
+.payedit {
+	padding-top:10px
+}
+.tipyf {
+	color:#999
+}
+.conBlock .pad {
+	padding-top:15px;
+	float:left
+}
+.conBlock .pad span {
+	float:left;
+	padding-right:810px
+}
+.titw,.titcon,.titzp {
+	width:100%;
+	height:auto;
+	float:left;
+	padding:5px 0
+}
+.titw {
+	font-size:14px;
+	font-weight:bold
+}
+.titcon {
+	line-height:22px
+}
+.titzp {
+	color:#a1001f
+}
+.coupons .right span.span1 {
+	float:right
+}
+.coupons .right span.problemicon {
+	float:right;
+	vertical-align:middle;
+	height:26px;
+	line-height:26px
+}
+.coupons .right span.problemicon img {
+	padding:7px 0 4px 0
+}
+.freight {
+	position:relative
+}
+.freight .span1 {
+	height:26px;
+	line-height:26px
+}
+.freightip {
+	padding:4px 8px;
+	text-align:left;
+	border:1px solid #ffbdbf;
+	background:#fffafa;
+	display:none;
+	border-radius:4px;
+	position:absolute;
+	z-index:10;
+	right:65px;
+	top:-10px;
+	line-height:20px
+}
+.freighimg {
+	position:absolute;
+	z-index:102;
+	right:-7px;
+	top:18px
+}
+.sureaddress {
+	text-align:right;
+	line-height:20px;
+	padding-right:20px;
+	border-top:1px solid #dbd7d8;
+	border-bottom:0
+}
+.buybtn {
+	width:958px;
+	height:auto;
+	float:left;
+	overflow:hidden;
+	background:#fdf1f5;
+	padding:20px 20px;
+	border:1px solid #dadada;
+	border-top:0
+}
+.couponcon {
+	width:600px;
+	float:left;
+	max-height:260px;
+	border:1px solid #666;
+	margin-top:15px;
+	position:relative;
+	z-index:1
+}
+.couponcon table {
+	text-align:center;
+	line-height:35px;
+	border-collapse:collapse
+}
+.couponcon table tr td {
+	border:1px solid #e8e8e8
+}
+.couponcon table a.btnuser {
+	background:#f95caa;
+	padding:4px 15px;
+	color:#fff;
+	border:1px solid #f95caa;
+	border-radius:4px
+}
+.usertip {
+	width:147px;
+	height:80px;
+	display:none;
+	position:absolute;
+	right:-40px;
+	top:40px
+}
+.usertipcon {
+	display:block;
+	width:137px;
+	height:40px;
+	padding:6px 4px 6px 6px;
+	border:1px solid #ffbdbf;
+	line-height:20px;
+	background:#fffafa;
+	border-radius:4px;
+	position:absolute;
+	z-index:10;
+	top:-55px;
+	left:-20px
+}
+.usertipimg {
+	position:absolute;
+	z-index:10;
+	top:-7px;
+	left:40px
+}
+.usertip2 {
+	width:147px;
+	height:80px;
+	display:none;
+	position:absolute;
+	right:-40px;
+	top:40px
+}
+.usertipcon2 {
+	display:block;
+	width:137px;
+	height:40px;
+	padding:6px 4px 6px 6px;
+	border:1px solid #ffbdbf;
+	line-height:20px;
+	background:#fffafa;
+	border-radius:4px;
+	position:absolute;
+	z-index:10;
+	top:-55px;
+	left:-20px
+}
+.usertipimg2 {
+	position:absolute;
+	z-index:10;
+	top:-7px;
+	left:40px
+}
+.usercoupon {
+	padding-top:20px
+}
+.useCouErrImg {
+	position:absolute;
+	top:10px;
+	left:0
+}
+.useCouErr {
+	position:relative;
+	display:none;
+	float:left;
+	margin-left:5px;
+	padding-left:6px
+}
+.useCouErrHtm {
+	display:inline-block;
+	padding:0 7px;
+	height:30px;
+	line-height:30px;
+	background:#fffafa;
+	border:1px #ffbcbc solid;
+	border-radius:4px;
+	color:red;
+	font-weight:bold
+}
+.couponsucess {
+	float:left;
+	margin-top:20px;
+	margin-bottom:20px
+}
+.couponsucess span,.couponsucess a {
+	display:block;
+	padding:8px 13px;
+	height:14px;
+	line-height:14px;
+	color:#878787;
+	border:1px dashed #ddd;
+	background:#f8f8f8;
+	float:left
+}
+.couponsucess span strong {
+	font-size:14px;
+	color:#f95caa
+}
+.couponsucess span b {
+	color:#f95caa
+}
+.couponsucess span {
+	color:#000;
+	border-right:0
+}
+.redbagsucess {
+	float:left;
+	margin-top:20px;
+	margin-bottom:20px
+}
+.redbagsucess span,.redbagsucess a {
+	display:block;
+	padding:8px 13px;
+	height:14px;
+	line-height:14px;
+	color:#878787;
+	border:1px dashed #ddd;
+	background:#f8f8f8;
+	float:left
+}
+.redbagsucess span strong {
+	font-size:14px;
+	color:#f95caa
+}
+.redbagsucess span b {
+	color:#f95caa
+}
+.redbagsucess span {
+	color:#000;
+	border-right:0
+}
+.couponconlist {
+	width:100%;
+	max-height:225px;
+	position:relative;
+	overflow:hidden
+}
+#divcontent {
+	width:100%;
+	height:auto
+}
+.newadress {
+	width:100%;
+	height:auto;
+	border-top:1px solid #dbd7d8;
+	float:left;
+	padding:20px 0;
+	overflow:hidden
+}
+.newadress table tr td {
+	line-height:45px
+}
+.newadress .tit {
+	margin-left:20px;
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom:10px
+}
+.simpleVersionFooter {
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden
+}
+.adressall ul {
+	position:relative;
+	margin:0;
+	list-style-type:none;
+	z-index:1;
+	width:2106px
+}
+.adressall ul li {
+	width:232px;
+	height:167px;
+	overflow:hidden;
+	float:left
+}
+.thumbContainer {
+	Z-INDEX:3;
+	right:0;
+	WIDTH:9px;
+	POSITION:absolute;
+	toP:0;
+	background:#edecec;
+	HEIGHT:217px;
+	display:none
+}
+a.gotoSettlement {
+	height:38px
+}
+.border {
+	border-top:1px #dadada solid
+}
+.btn_02b {
+	background:url(../images/btn04c.gif);
+	padding:5px 25px;
+	font-size:14px;
+	font-weight:bold;
+	color:#8a8a8a;
+	display:inline;
+	border-radius:3px;
+	cursor:pointer;
+	border:1px #c8c8c8 solid
+}
+.checkTipsErr {
+	z-index:9999;
+	margin-left:-5px
+}
+.redPapercon {
+	position:relative;
+	width:610px;
+	margin-top:15px;
+	padding-top:37px;
+	border:1px #666 solid
+}
+.redPapercon table {
+	text-align:center;
+	line-height:35px;
+	border-collapse:collapse
+}
+.redPapercon table tr td {
+	border:1px solid #e8e8e8
+}
+.redPapercon table a.btnuser1 {
+	background:#f95caa;
+	padding:4px 15px;
+	color:#fff;
+	border:1px solid #f95caa;
+	border-radius:4px
+}
+.redPapercon .redThead {
+	position:absolute;
+	width:610px;
+	top:0;
+	left:0
+}
+.redPapercon .redBody {
+	height:181px;
+	overflow-y:auto;
+	overflow-x:hidden
+}

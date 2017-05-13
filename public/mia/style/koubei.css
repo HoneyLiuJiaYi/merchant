@@ -1,0 +1,2482 @@
+#c_k textarea {
+	height:140px;
+	width:450px;
+	font-size:12px;
+	line-height:20px
+}
+.pink_kb {
+	color:#f450a2
+}
+#xzw_starBox {
+	position:relative;
+	width:120px;
+	float:left
+}
+#xzw_starSys .description {
+	display:inline;
+	padding:10px
+}
+#xzw_starSys .star {
+	height:20px;
+	width:120px;
+	position:relative;
+	background:url(../images/star2.png) repeat-x;
+	cursor:pointer
+}
+#xzw_starSys .star li {
+	float:left;
+	padding:0;
+	margin:0
+}
+#xzw_starSys .star li a {
+	display:block;
+	width:24px;
+	height:20px;
+	overflow:hidden;
+	text-indent:-9999px;
+	position:absolute;
+	z-index:5
+}
+#xzw_starSys .star li a:hover {
+	background:url(../images/star2.png) 0 -25px repeat-x;
+	z-index:3;
+	left:0
+}
+#xzw_starSys .star a.one-star {
+	left:0
+}
+#xzw_starSys .star a.one-star:hover {
+	width:24px
+}
+#xzw_starSys .star a.two-stars {
+	left:24px
+}
+#xzw_starSys .star a.two-stars:hover {
+	width:48px
+}
+#xzw_starSys .star a.three-stars {
+	left:48px
+}
+#xzw_starSys .star a.three-stars:hover {
+	width:72px
+}
+#xzw_starSys .star a.four-stars {
+	left:72px
+}
+#xzw_starSys .star a.four-stars:hover {
+	width:96px
+}
+#xzw_starSys .star a.five-stars {
+	left:96px
+}
+#xzw_starSys .star a.five-stars:hover {
+	width:120px
+}
+#xzw_starSys .current-rating {
+	background:url(../images/star2.png) 0 -25px repeat-x;
+	position:absolute;
+	height:20px;
+	z-index:1;
+	top:0;
+	left:0
+}
+.upphoto div {
+	float:left;
+	margin:0 5px 0 0;
+	width:100px;
+	height:100px;
+	position:relative
+}
+.upphoto span.modify {
+	position:absolute;
+	right:25px;
+	top:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(../images/ico_layer.png) no-repeat -25px -50px;
+	width:20px;
+	height:20px;
+	cursor:pointer
+}
+.upphoto span.cancel {
+	position:absolute;
+	right:3px;
+	top:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(../images/ico_layer.png) no-repeat -25px -25px;
+	width:20px;
+	height:20px;
+	cursor:pointer
+}
+.upphoto span.modify:hover {
+	background-position:-50px -50px
+}
+.upphoto span.cancel:hover {
+	background-position:-50px -25px
+}
+.upphoto .queue {
+	border:solid 1px #dedede
+}
+.soldOut {
+	width:166px;
+	height:131px;
+	background:url(../images/soldout.png) no-repeat
+}
+*html .soldOut {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="../images/soldout.png");
+	background:0
+}
+.pi_price_box .soldOut {
+	position:absolute;
+	right:20px;
+	top:-15px
+}
+.channelList .right .block .soldOut {
+	position:absolute;
+	right:10px;
+	top:10px;
+	width:108px;
+	height:85px;
+	background:url(../images/soldout2.png) no-repeat
+}
+*html .channelList .right .block .soldOut {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="images/soldout2.png");
+	background:0
+}
+.zt01 .inp {
+	vertical-align:middle
+}
+.zt01 a.btn_05 {
+	margin-right:5px
+}
+.btn_10 {
+	font-size:12px;
+	font-weight:normal;
+	line-height:normal;
+	height:auto;
+	padding:5px 10px;
+	vertical-align:middle;
+	margin-left:5px
+}
+.swfupload {
+	float:left
+}
+.koubei {
+	padding-top:13px
+}
+.koubei .contents {
+	width:738px;
+	float:left;
+	display:inline
+}
+.koubei .side {
+	width:250px;
+	float:left;
+	display:inline;
+	margin-left:12px
+}
+.koubei .indexSlide {
+	margin-bottom:12px;
+	overflow:hidden;
+	position:relative
+}
+.koubei .indexSlide ul {
+	width:9999px
+}
+.koubei .indexSlide li {
+	float:left;
+	height:300px
+}
+.indexSlide .rb2left,.indexSlide .rb2right {
+	display:none;
+	width:30px;
+	height:50px;
+	position:absolute;
+	background:url(../images/indexico2.png) no-repeat -37px -676px;
+	z-index:200;
+	cursor:pointer;
+	top:45%
+}
+.indexSlide .rb2left {
+	left:0
+}
+.indexSlide .rb2right {
+	right:0;
+	background-position:0 -740px
+}
+.indexSlide .rb2left:hover {
+	background-position:0 -676px
+}
+.indexSlide .rb2right:hover {
+	background-position:-37px -740px
+}
+.koubei .section {
+	padding:0 13px 0 18px;
+	clear:both;
+	background-color:#fff;
+	overflow:hidden;
+	margin-bottom:12px
+}
+.koubei .miaTaste {
+	padding-bottom:10px
+}
+.koubei .section .tit {
+	color:#ff77a5;
+	font-size:18px;
+	font-family:'Microsoft Yahei';
+	position:relative;
+	height:42px;
+	line-height:42px;
+	background:url(../images/koubei/titline.png) no-repeat 0 bottom;
+	margin-bottom:16px
+}
+.koubei .section .tit i {
+	color:#dcdcdc;
+	font-family:'Myriad Pro';
+	margin-left:7px
+}
+.koubei .section .tit .adds {
+	position:absolute;
+	right:10px;
+	top:5px;
+	font-size:14px;
+	color:#ff77a5;
+	padding-right:13px;
+	background:url(../images/koubei/moreico.png) no-repeat right center
+}
+.koubei .section .tit .time {
+	background:url(../images/koubei/time.png) no-repeat 0 center;
+	padding:0 0 0 25px;
+	font-family:SimSun
+}
+.koubeiIndex .miaTaste .cell {
+	float:left;
+	padding:0 25px 20px 0;
+	width:325px;
+	position:relative;
+	background:url(../images/koubei/vdotline.png) repeat-y right top
+}
+.koubeiIndex .miaTaste .c2 {
+	background-image:none;
+	padding-left:13px;
+	padding-right:0
+}
+.koubeiIndex .miaTaste .cell .img {
+	position:absolute;
+	top:0;
+	left:0
+}
+.koubeiIndex .miaTaste .hline {
+	background:url(../images/koubei/hdotline.png) repeat-x left bottom;
+	height:1px;
+	overflow:hidden;
+	clear:both
+}
+.koubeiIndex .miaTaste .cell h6,.koubeiIndex .miaTaste .cell p {
+	margin:0 0 0 115px
+}
+.koubeiIndex .miaTaste .c3 {
+	padding-top:16px;
+	padding-bottom:3px;
+	margin-bottom:15px
+}
+.koubeiIndex .miaTaste .c3 .img {
+	top:16px
+}
+.koubeiIndex .miaTaste .c2 .img {
+	left:13px
+}
+.koubeiIndex .miaTaste .cell h6 {
+	font-size:14px;
+	color:#f34fa0;
+	padding:4px 0 5px 0
+}
+.koubeiIndex .miaTaste .cell h6 a {
+	color:#f34fa0
+}
+.koubeiIndex .miaTaste .cell p {
+	color:#727171;
+	line-height:24px
+}
+.koubeiIndex .chicKnows {
+	padding-bottom:16px
+}
+.koubeiIndex .chicKnows .tit {
+	margin-bottom:18px
+}
+.koubeiIndex .chicKnows .cell {
+	width:340px;
+	height:184px;
+	float:left;
+	position:relative;
+	margin:0 15px 19px 0;
+	display:inline;
+	-webkit-box-shadow:6px 6px 0 #f6f6f6;
+	-moz-box-shadow:6px 6px 0 #f6f6f6;
+	-ms-box-shadow:6px 6px 0 #f6f6f6;
+	-o-box-shadow:6px 6px 0 #f6f6f6;
+	box-shadow:6px 6px 0 #f6f6f6
+}
+.koubeiIndex .chicKnows .c2 {
+	margin-right:0
+}
+.koubeiIndex .chicKnows .cell .avatarbg {
+	background:url(../images/koubei/corn.png) no-repeat 0 0;
+	height:60px;
+	width:53px;
+	position:absolute;
+	top:0;
+	left:0
+}
+.koubeiIndex .chicKnows .cell .avatar {
+	width:46px;
+	height:46px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	position:absolute;
+	left:10px;
+	top:8px
+}
+.koubeiIndex .chicKnows .cell .name:link,.koubeiIndex .chicKnows .cell .name:visited {
+	color:#f34fa1;
+	position:absolute;
+	left:63px;
+	top:20px
+}
+.koubeiIndex .chicKnows .text {
+	border:solid 1px #e8e9e9;
+	width:154px;
+	height:182px;
+	float:left
+}
+.koubeiIndex .chicKnows .text .p {
+	padding:70px 8px 0 10px;
+	color:#717171;
+	line-height:18px;
+	height:98px;
+	overflow:hidden
+}
+.koubeiIndex .chicKnows .text b {
+	color:#585858;
+	margin-bottom:5px;
+	display:block
+}
+.koubeiIndex .chicKnows .cover {
+	float:left
+}
+.koubeiIndex .yourVoice {
+	padding-bottom:27px
+}
+.koubeiIndex .yourVoice .tips {
+	text-align:center;
+	background-color:#f6f6f6;
+	color:#717171;
+	line-height:32px;
+	margin-bottom:18px
+}
+.koubeiIndex .yourVoice .pk {
+	width:701px;
+	height:365px;
+	position:relative;
+	background:url(../images/koubei/pkbg.jpg) no-repeat 0 0;
+	margin-bottom:20px
+}
+.koubeiIndex .yourVoice .pk .play1,.koubeiIndex .yourVoice .pk .play2 {
+	width:350px;
+	float:left;
+	position:relative
+}
+.koubeiIndex .yourVoice .pk .tit2 {
+	font-size:14px;
+	color:#fff;
+	text-indent:24px;
+	line-height:32px;
+	font-family:'Microsoft Yahei';
+	height:32px;
+	overflow:hidden
+}
+.koubeiIndex .yourVoice .pk .tit2 a {
+	color:#fff
+}
+.koubeiIndex .yourVoice .pk .mimg {
+	width:84px;
+	margin:22px 0 0 28px
+}
+.koubeiIndex .yourVoice .pk .bimg {
+	position:absolute;
+	left:141px;
+	top:57px
+}
+.koubeiIndex .yourVoice .pk .bimg img {
+	height:180px;
+	width:180px
+}
+.koubeiIndex .yourVoice .play2 .mimg {
+	margin-left:240px
+}
+.koubeiIndex .yourVoice .play2 .bimg {
+	left:30px
+}
+.koubeiIndex .yourVoice .pk .mimg img {
+	width:40px;
+	height:40px;
+	border:solid 1px #85c1ff;
+	vertical-align:bottom;
+	float:left;
+	cursor:pointer
+}
+.koubeiIndex .yourVoice .pk .mimg .cur {
+	border:solid 1px #43a0ff
+}
+.koubeiIndex .yourVoice .play2 .mimg img {
+	border-color:#ff77a5
+}
+.koubeiIndex .yourVoice .pk .play2 .cur {
+	border-color:#ff4f8b
+}
+.koubeiIndex .yourVoice .pk .t2 {
+	clear:both;
+	margin:130px 0 0 -18px;
+	text-indent:25px;
+	font-weight:bold
+}
+.koubeiIndex .yourVoice .play2 .t2 {
+	text-indent:238px
+}
+.koubeiIndex .yourVoice .pk .user {
+	margin:0 0 15px 25px;
+	width:138px;
+	height:58px
+}
+.koubeiIndex .yourVoice .play2 .user {
+	margin-left:240px
+}
+.koubeiIndex .yourVoice .pk .user img {
+	width:46px;
+	height:46px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%
+}
+.koubeiIndex .yourVoice .pk .user a {
+	display:block;
+	text-align:center;
+	width:100px;
+	overflow:hidden;
+	color:#f34fa1;
+	font-weight:bold
+}
+.koubeiIndex .yourVoice .text {
+	margin:0 28px;
+	line-height:19px;
+	color:#717171;
+	height:118px;
+	overflow:hidden
+}
+.koubeiIndex .yourVoice .text b {
+	color:#585858
+}
+.koubeiIndex .pkBar {
+	clear:both
+}
+.koubeiIndex .pkBar .vote {
+	float:left;
+	width:62px;
+	height:52px;
+	padding-top:10px;
+	font-family:'Microsoft Yahei';
+	color:#fff;
+	font-size:18px;
+	background-color:#62b0ff;
+	text-align:center;
+	line-height:1.2;
+	cursor:pointer
+}
+.koubeiIndex .pkBar .v2 {
+	background-color:#ff77a5
+}
+.koubeiIndex .pkBar .bar {
+	background-color:#ff77a5;
+	height:24px;
+	float:left;
+	width:577px;
+	margin:21px 0 0 0;
+	display:inline
+}
+.koubeiIndex .pkBar .bar .nm1,.koubeiIndex .pkBar .bar .nm2 {
+	float:left;
+	background-color:#62b0ff;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	font-family:SimSun;
+	font-weight:bold
+}
+.koubeiIndex .pkBar .bar .nm2 {
+	float:left;
+	background-color:#ff77a5
+}
+.koubeiIndex .pkBar .bar cite {
+	font-style:normal
+}
+.koubeiIndex .side .logarea {
+	background-color:#fff;
+	clear:both;
+	height:300px;
+	margin-bottom:12px
+}
+.koubeiIndex .side .unlog {
+	background:url(../images/koubei/loginarea.png) no-repeat -278px 0;
+	height:171px;
+	margin-bottom:15px;
+	position:relative
+}
+.koubeiIndex .side .logarea .qline {
+	width:28px;
+	height:25px;
+	position:absolute;
+	right:-28px;
+	top:0;
+	background:url(../images/koubei/loginarea.png) no-repeat -250px 0
+}
+.koubeiIndex .side .loginfo {
+	background:url(../images/koubei/loginarea.png) no-repeat 0 0;
+	height:151px;
+	position:relative;
+	padding-top:20px;
+	text-align:center
+}
+.koubeiIndex .side .loginfo .qline {
+	background-position:-528px 0
+}
+.koubeiIndex .side .logarea .login,.koubeiIndex .side .logarea .writekb {
+	display:inline;
+	float:left;
+	width:198px;
+	height:38px;
+	line-height:38px;
+	background-color:#ff77a5;
+	color:#fff;
+	text-align:center;
+	font-family:'Microsoft Yahei';
+	font-size:18px;
+	margin:0 0 15px 26px;
+	clear:both;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px
+}
+.koubeiIndex .side .logarea .writekb {
+	background-color:#62b0ff
+}
+.koubeiIndex .side .logintext {
+	margin:8px 0 13px 26px;
+	line-height:24px;
+	color:#717171
+}
+.koubeiIndex .side .logintext i {
+	color:#f34fa0
+}
+.koubeiIndex .side .loginfo .avatar img {
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	width:106px;
+	height:106px;
+	border:solid 2px #fff;
+	margin-bottom:5px
+}
+.koubeiIndex .side .loginfo .name {
+	padding:0 0 0 48px
+}
+.koubeiIndex .side .loginfo .name a {
+	color:#fff;
+	font-weight:bold;
+	font-size:18px;
+	font-family:SimSun
+}
+.koubeiIndex .side .loginfo cite {
+	padding:0 5px 2px 7px;
+	background:#ff77a5 url(../images/koubei/arr2.png) no-repeat 0 center;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	font-style:normal;
+	color:#fff;
+	line-height:12px
+}
+.koubei .side .block {
+	background-color:#fff;
+	margin-bottom:12px
+}
+.koubei .side .block .cell {
+	margin:0 10px;
+	background:url(../images/koubei/hdotline.png) repeat-x 0 bottom;
+	overflow:hidden;
+	position:relative;
+	height:110px;
+	padding-top:16px
+}
+.koubei .side .block .tit {
+	background:url(../images/koubei/sidetit.png) no-repeat 0 0;
+	line-height:37px;
+	height:37px;
+	font-size:18px;
+	color:#fff;
+	font-family:'Microsoft Yahei';
+	text-indent:15px
+}
+.koubei .side .vipkb .q {
+	display:block;
+	background:url(../images/koubei/q.png) no-repeat 0 0;
+	height:29px;
+	text-align:center;
+	color:#f34fa1;
+	font-weight:bold;
+	line-height:20px
+}
+.koubei .side .vipkb .img {
+	width:65px;
+	height:65px;
+	position:absolute;
+	left:10px;
+	top:50px
+}
+.koubei .side .vipkb p {
+	margin-left:85px;
+	line-height:18px;
+	color:#717171
+}
+.koubei .side .vipkb .p1 {
+	margin-bottom:4px;
+	color:#f34fa1;
+	font-weight:bold;
+	padding-top:4px
+}
+.koubei .side .vipkb .p1 a {
+	display:block;
+	width:82px;
+	overflow:hidden
+}
+.koubei .side .vipkb a {
+	color:#f34fa1
+}
+.koubei .side .block .cont {
+	overflow:hidden;
+	position:relative;
+	height:881px
+}
+.koubei .side .block .ct {
+	position:relative;
+	left:0
+}
+.koubei .side .snv {
+	height:29px;
+	position:relative
+}
+.koubei .side .snv .down {
+	float:left;
+	width:11px;
+	height:7px;
+	background:url(../images/koubei/arr.png) no-repeat 0 0;
+	margin:10px 0 0 10px;
+	display:inline
+}
+.koubei .side .snv .up {
+	float:left;
+	width:11px;
+	height:7px;
+	background:url(../images/koubei/arr.png) no-repeat -20px 0;
+	margin:10px 0 0 105px;
+	display:inline
+}
+.koubei .side .hotkb .cont {
+	height:646px
+}
+.koubei .side .hotkb .cell {
+	height:110px
+}
+.koubei .side .hotkb .img {
+	width:85px;
+	height:85px;
+	float:left;
+	display:inline
+}
+.koubei .side .hotkb .text {
+	margin-left:100px
+}
+.koubei .side .hotkb p {
+	margin-bottom:4px
+}
+.koubei .side .hotkb .p1 {
+	margin-bottom:10px
+}
+.koubei .side .hotkb .p1 a {
+	color:#f34fa1
+}
+.koubei .side .hotkb .rank {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	overflow:hidden;
+	margin-bottom:10px
+}
+.koubei .side .hotkb .rank .star {
+	background:url(../images/koubei/star.png) no-repeat 0 -20px;
+	height:12px;
+	display:block
+}
+.koubei .side .hotkb .text i {
+	color:#f34fa1
+}
+.koubei .side .hotkb .cont .k10 {
+	height:1240px
+}
+.koubei .side .hotkb .cont .k6 {
+	height:700px
+}
+.koubei .side .hotkb .cont .k5 {
+	height:670px
+}
+.koubei .side .hotkb .cont .k6 {
+	height:700px
+}
+.koubei .side .hotkb .cont .k7 {
+	height:900px
+}
+.koubei .side .hotkb .cont .k8 {
+	height:1000px
+}
+.koubei .side .insGoods .cell {
+	overflow:hidden;
+	height:105px;
+	padding-top:15px
+}
+.koubei .side .insGoods .cont {
+	height:599px
+}
+.koubei .side .insGoods .img {
+	float:left;
+	width:85px;
+	height:85px
+}
+.koubei .side .insGoods .text {
+	float:left;
+	margin:0 0 0 11px
+}
+.koubei .side .insGoods .text a {
+	color:#f34fa1
+}
+.koubei .side .insGoods .text .p1 {
+	font-weight:bold
+}
+.koubei .side .insGoods .text .p3 span {
+	float:left
+}
+.koubei .side .insGoods .text .p2 {
+	line-height:24px;
+	padding:10px 0
+}
+.koubei .side .insGoods .text .p2 i {
+	color:#f34fa1;
+	margin-right:8px
+}
+.koubei .side .insGoods .text .p2 cite {
+	font-style:normal;
+	color:#999;
+	text-decoration:line-through
+}
+.koubei .side .insGoods .text .p2 b {
+	font-weight:bold;
+	font-size:16px
+}
+.koubei .side .insGoods .text .b {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	float:right;
+	margin-top:2px
+}
+.koubei .side .insGoods .text .c {
+	background:url(../images/koubei/star.png) no-repeat 0 -20px;
+	height:12px;
+	display:block
+}
+.koubei .whoUsing .flowBlock {
+	position:relative;
+	height:1200px
+}
+.koubei .whoUsing .cell {
+	border:solid 1px #e0e0e0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	width:224px;
+	padding-bottom:12px
+}
+.koubei .whoUsing .cell:hover {
+	-webkit-box-shadow:0 1px 3px 0 #e4e4e4;
+	-moz-box-shadow:0 1px 3px 0 #e4e4e4;
+	-ms-box-shadow:0 1px 3px 0 #e4e4e4;
+	-o-box-shadow:0 1px 3px 0 #e4e4e4;
+	box-shadow:0 1px 3px 0 #e4e4e4
+}
+.koubei .whoUsing .cell .ico {
+	background:url(../images/koubei/tm.png) no-repeat 0 0;
+	width:60px;
+	text-align:center;
+	height:27px;
+	line-height:27px;
+	position:absolute;
+	top:-5px;
+	left:0;
+	color:#fff;
+	font-weight:bold;
+	font-family:SimSun
+}
+.koubei .whoUsing .cell .simg {
+	background-color:#fff;
+	height:36px;
+	padding:1px
+}
+.koubei .whoUsing .cell .simg img {
+	width:34px;
+	height:34px;
+	vertical-align:bottom;
+	margin-right:1px;
+	cursor:pointer
+}
+.koubei .whoUsing .cell .name {
+	border-bottom:solid 1px #e7e7e7;
+	border-top:solid 1px #e7e7e7;
+	line-height:33px;
+	text-indent:12px;
+	margin-bottom:6px;
+	background-color:#fcfcfc;
+	height:33px;
+	overflow:hidden
+}
+.koubei .whoUsing .cell .name a {
+	color:#f34fa1
+}
+.koubei .whoUsing .cell .name .tobuy {
+	background-color:#f34fa1;
+	color:#FFF;
+	border-radius:3px;
+	float:right;
+	width:49px;
+	height:23px;
+	margin:5px;
+	line-height:23px;
+	text-indent:7px
+}
+.koubei .whoUsing .cell .p1 a {
+	color:#f34fa1
+}
+.koubei .whoUsing .cell .p1 {
+	margin:0 11px;
+	line-height:19px;
+	color:#717171
+}
+.koubei .whoUsing .cell .loadimg {
+	background:url(../images/loading.gif) no-repeat center center
+}
+.koubei .category .cat {
+	background-color:#fbfbfb;
+	line-height:24px;
+	text-indent:12px;
+	padding:0 15px;
+	position:relative;
+	padding:3px 0
+}
+.koubei .category .cat ul {
+	width:850px;
+	float:left
+}
+.koubei .category .cat ul li {
+	float:left
+}
+.koubei .category .cat b {
+	float:left
+}
+.koubei .category .cat a.cur {
+	color:#ff77a5
+}
+.koubei .category .cat a {
+	margin:0 12px 0 0
+}
+.koubei .category {
+	padding-bottom:20px;
+	width:960px
+}
+.pingce .category .tit {
+	font-size:24px;
+	height:53px;
+	line-height:53px
+}
+.pingce .category .tit i {
+	font-size:18px
+}
+.pingce .pclist {
+	background-color:#fff
+}
+.pingce .pclist .cell {
+	background:url(../images/koubei/hdotline.png) repeat-x 0 0;
+	position:relative;
+	margin:0 18px;
+	clear:both;
+	overflow:hidden;
+	padding-bottom:10px
+}
+.pingce .pclist .first {
+	background-image:none
+}
+.pingce .pclist .cell .img {
+	margin:18px 0 0 0;
+	float:left;
+	display:inline
+}
+.pingce .pclist .cell .text {
+	margin-left:160px;
+	position:relative
+}
+.pingce .pclist .cell .text .t {
+	font-size:14px;
+	font-weight:bold;
+	color:#f34fa0;
+	line-height:1.2;
+	padding:30px 0 12px 0
+}
+.pingce .pclist .cell .text .t a {
+	color:#f34fa0
+}
+.pingce .pclist .cell .text .txt {
+	line-height:24px;
+	color:#717171;
+	margin-bottom:11px
+}
+.pingce .pclist .cell .text .info {
+	color:#a8a8a8;
+	line-height:1.4;
+	height:24px;
+	position:absolute;
+	top:138px;
+	left:445px
+}
+.pingce .pclist .cell .text .info b {
+	color:#f34fa1;
+	font-family:SimSun
+}
+.pingce .pclist .cell .text .time {
+	text-align:right;
+	float:right;
+	margin-top:2px
+}
+.koubei .page {
+	text-align:center;
+	padding:30px 0 25px 0;
+	font-size:12px
+}
+.koubei .page a {
+	line-height:20px;
+	height:20px;
+	padding:0 6px;
+	font-size:12px;
+	margin-right:7px
+}
+.koubei .page a.current {
+	background-color:#f34fa0;
+	border-color:#f34fa0;
+	color:#fff
+}
+.koubei .page .topage {
+	width:25px;
+	height:20px;
+	border:solid 1px #c4c2c2
+}
+.koubei .page .sub {
+	background-color:#f34fa0;
+	color:#fff;
+	border-color:#f34fa0
+}
+.drlist {
+	background-color:#fff
+}
+.koubei .drlist .tit .adds {
+	background-image:none;
+	padding-right:0;
+	right:0
+}
+.drlist .tit .adds .order {
+	padding:0 23px 0 8px;
+	height:21px;
+	line-height:21px;
+	border:solid 1px #e7e7e7;
+	background:#f9f9f9 url(../images/koubei/order.png) no-repeat 37px 5px
+}
+.drlist .tit .adds .byTime {
+	margin-right:9px
+}
+.drlist .tit .adds .byHotUp,.drlist .tit .adds .byHotDown,.drlist .tit .adds .byTimeUp,.drlist .tit .adds .byTimeDown {
+	background-color:#f34fa0;
+	color:#fff;
+	border-color:#f34fa0
+}
+.drlist .tit .adds .orderUp {
+	background-position:37px -94px;
+	background-color:#f34fa0;
+	color:#fff;
+	border-color:#f34fa0
+}
+.drlist .tit .adds .orderDown {
+	background-position:37px -64px;
+	color:#fff;
+	border-color:#f34fa0;
+	background-color:#f34fa0
+}
+.drlist .cell {
+	background:url(../images/koubei/hdotline.png) repeat-x 0 0;
+	position:relative;
+	margin:0 18px;
+	padding:18px 0 17px 0
+}
+.drlist .first {
+	background-image:none;
+	padding-top:0
+}
+.drlist .cell .img {
+	position:absolute;
+	left:0;
+	top:18px
+}
+.drlist .first .img {
+	top:0
+}
+.drlist .cell .text {
+	margin-left:160px;
+	-wekbit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	border:solid 1px #dadada;
+	position:relative;
+	padding-right:20px;
+	height:100px;
+	margin-bottom:12px;
+	padding-bottom:10px
+}
+.drlist .cell .text .avatar {
+	position:absolute;
+	left:12px;
+	top:8px;
+	text-align:center;
+	color:#f34fa0;
+	width:52px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	display:block
+}
+.drlist .cell .text .avatar img {
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	width:46px;
+	height:46px
+}
+.drlist .cell .text p {
+	margin-left:75px
+}
+.drlist .cell .text .t {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+	padding-top:10px
+}
+.drlist .cell .text .t a {
+	color:#f34fa0
+}
+.drlist .cell .text .txt {
+	font-size:12px;
+	color:#717171;
+	line-height:24px
+}
+.drlist .cell .text .leftarr {
+	position:absolute;
+	left:-7px;
+	top:35%;
+	width:7px;
+	height:11px;
+	background:url(../images/koubei/arr3.png) no-repeat 0 0
+}
+.drlist .cell .info {
+	margin-left:160px;
+	color:#a8a8a8
+}
+.drlist .cell .info i {
+	color:#f34fa0;
+	margin-right:14px
+}
+.koubeijie .whoUsing .tit {
+	font-size:24px;
+	height:53px;
+	line-height:53px
+}
+.koubeijie .whoUsing .tit i {
+	font-size:18px
+}
+.koubeijie .whoUsing .tit .adds {
+	background-image:none;
+	padding-right:0;
+	right:0;
+	width:200px;
+	top:18px
+}
+.whoUsing .tit .inp {
+	width:135px;
+	height:26px;
+	border:solid 1px #e8e9e9;
+	border-right:0;
+	float:right;
+	padding:0;
+	margin:0;
+	text-indent:8px
+}
+.whoUsing .tit .inp:focus {
+	outline:0
+}
+.whoUsing .tit .searchbtn {
+	float:right;
+	width:28px;
+	height:28px;
+	background:url(../images/koubei/search.png) no-repeat 0 0;
+	border:0;
+	margin:0;
+	padding:0
+}
+.koubei .koubeijie .cat {
+	min-height:30px;
+	overflow:
+}
+.koubeijie .cat {
+	position:relative
+}
+.koubeijie .cat .brands {
+	position:relative
+}
+.koubeijie .cat .brandlink {
+	position:relative;
+	z-index:200;
+	text-indent:0;
+	line-height:24px;
+	height:24px;
+	padding:0 5px
+}
+.koubeijie .cat .pop .brandlink {
+	background-color:#fff;
+	color:#ff77a5;
+	border:solid 1px #e8e8e8;
+	border-bottom-color:#fff;
+	display:inline-block;
+	zoom:1
+}
+.koubeijie .cat .brands .brandpop {
+	display:none;
+	position:absolute;
+	top:18px;
+	left:0;
+	width:760px;
+	height:270px;
+	background-color:#fff;
+	border:solid 1px #e8e9e9;
+	z-index:190;
+	overflow:auto
+}
+.koubeijie .cat .pop .brandpop {
+	display:block
+}
+.koubeijie .cat .brands .bcell {
+	clear:both;
+	padding:20px 0 5px 0;
+	margin:0 15px 0 14px;
+	overflow:hidden;
+	border-top:dashed 1px #e8e9e9
+}
+.koubeijie .cat .brands .first {
+	border-top:0
+}
+.koubeijie .cat .brands .bd,.koubeijie .cat .brands .art {
+	float:left;
+	width:42px;
+	text-align:left;
+	font-size:18px;
+	color:#ff77a5;
+	text-indent:10px
+}
+.koubeijie .cat .brands .bd {
+	width:668px;
+	line-height:1.2
+}
+.koubeijie .cat .brands .bd img {
+	width:108px;
+	height:44px
+}
+.koubeijie .cat .brands .bd a {
+	float:left;
+	text-align:center;
+	margin:0 24px 15px 0;
+	text-indent:0;
+	font-size:12px
+}
+.koubei .home .info {
+	background-color:#fff;
+	margin-bottom:12px;
+	padding:18px 0
+}
+.koubei .home .info .section {
+	background:#fff url(../images/koubei/drdefaultbg.jpg) no-repeat right 0;
+	height:264px;
+	text-align:center;
+	margin:0 18px;
+	padding:0;
+	position:relative;
+	overflow:visible
+}
+.koubei .home .info .block {
+	width:220px;
+	position:relative;
+	float:left;
+	padding:15px 0 0 0;
+	color:#fff;
+	background:url(../images/koubei/homeuserinfobg.png) no-repeat 0 0;
+	height:264px
+}
+.koubei .home .info .block a {
+	color:#fff
+}
+.koubei .home .info .block .name {
+	font-size:16px;
+	line-height:32px
+}
+.koubei .home .info .block .des {
+	line-height:18px
+}
+.koubei .home .info .block .des b {
+	color:#ffd162;
+	font-size:14px
+}
+.koubei .home .info .block .op {
+	padding-top:10px;
+	padding-left:50px
+}
+.koubei .home .info .block .op .edit {
+	width:118px;
+	background:url(../images/koubei/edit.png) no-repeat 24px 2px;
+	text-indent:35px;
+	font-size:12px;
+	color:#fff;
+	display:block;
+	background-color:#ffa0c0;
+	-webkit-border-radius:13px;
+	-moz-border-radius:13px;
+	-ms-border-radius:13px;
+	-o-border-radius:13px;
+	border-radius:13px;
+	height:26px;
+	line-height:26px
+}
+.koubei .home .info .block .ico {
+	position:absolute;
+	right:0;
+	top:0;
+	width:63px;
+	height:64px;
+	background:url(../images/koubei/drico.png) no-repeat 0 0
+}
+.koubei .home .normal {
+	padding:0
+}
+.koubei .home .normal .section {
+	background:#fff url(../images/koubei/defaultbg.jpg) no-repeat 0 18px;
+	padding:210px 0 18px 0;
+	height:38px;
+	margin:18px 18px 0 18px
+}
+.koubei .home .normal .block {
+	width:100%;
+	position:absolute;
+	float:none;
+	height:38px;
+	line-height:38px;
+	background-color:#85c1ff;
+	background-image:none;
+	padding:0
+}
+.koubei .home .normal .name cite {
+	padding:2px 5px 2px 7px;
+	background:#ff77a5 url(../images/koubei/arr2.png) no-repeat 0 center;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	font-style:normal;
+	color:#fff;
+	line-height:12px;
+	font-size:12px
+}
+.koubei .home .info .tochic {
+	background:url(../images/koubei/todaren.png) no-repeat 0 0;
+	width:34px;
+	height:144px;
+	position:absolute;
+	left:-52px;
+	top:45px
+}
+.home .info .avatar img {
+	width:125px;
+	height:125px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%
+}
+.koubei .home .normal .tochic {
+	left:-53px
+}
+.koubei .home .info .text {
+	width:712px;
+	float:left;
+	height:64px;
+	overflow:hidden;
+	margin:200px 0 0 0;
+	text-align:left;
+	background-color:rgba(255,255,255,0.3);
+	padding:0 16px;
+	line-height:20px
+}
+.koubei .home .normal .avatar img {
+	position:absolute;
+	top:-100px;
+	left:20px;
+	border:solid 5px #85c1ff
+}
+.koubei .home .normal .block p {
+	float:left;
+	display:inline
+}
+.koubei .home .normal .name {
+	margin-left:162px;
+	font-size:18px;
+	font-weight:bold;
+	font-family:SimSun
+}
+.koubei .home .normal .block .des {
+	line-height:38px;
+	margin-left:25px
+}
+.koubei .home .normal .block .op {
+	padding-top:6px;
+	float:right;
+	margin-right:10px
+}
+.koubei .home .normal .block .op .edit {
+	background-color:#aad4ff
+}
+.home .todolist .con {
+	position:relative
+}
+.home .todolist .cont {
+	margin:0 18px;
+	overflow:hidden
+}
+.home .todolist .cont ul {
+	width:950px
+}
+.home .todolist .left,.home .todolist .right {
+	width:8px;
+	height:11px;
+	position:absolute;
+	top:90px;
+	background:url(../images/koubei/todoarr.png) no-repeat 0 0;
+	cursor:pointer
+}
+.home .todolist .left {
+	left:0
+}
+.home .todolist .right {
+	right:0;
+	background-position:right 0
+}
+.home .todolist li {
+	float:left;
+	margin:0 24px 0 0;
+	display:inline;
+	text-align:center;
+	padding-bottom:18px;
+	width:134px;
+	overflow:hidden
+}
+.home .todolist img {
+	width:132px;
+	height:132px;
+	margin-bottom:10px;
+	border:solid 1px #eaebeb
+}
+.home .todolist .pdname {
+	height:30px;
+	overflow:hidden;
+	display:block
+}
+.home .todolist .writebtn {
+	display:block;
+	width:100%;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	background-color:#62b0ff;
+	color:#fff;
+	font-size:16px;
+	font-family:'Microsoft YaHei';
+	line-height:30px;
+	height:30px;
+	margin-top:10px
+}
+.home .itemlist p.listnav {
+	padding:10px 0 0 0;
+	line-height:33px;
+	margin-bottom:10px;
+	text-indent:14px;
+	background:url(../images/koubei/itemtitbg.png) repeat-x 0 bottom;
+	font-size:14px
+}
+.home .itemlist .listnav .cur {
+	color:#ff76a4;
+	border-bottom:solid 1px #ff78a6;
+	padding-bottom:7px
+}
+.home .itemlist .item {
+	background:url(../images/koubei/itemlistbg.png) repeat-y 0 0;
+	position:relative;
+	height:auto;
+	display:block;
+	width:auto;
+	padding:20px 0;
+	overflow:hidden;
+	margin:0 0 10px 0
+}
+.home .itemlist .item .left {
+	width:320px;
+	float:left
+}
+.home .itemlist .left .t {
+	width:192px;
+	text-align:right;
+	float:left;
+	display:inline;
+	margin-right:10px;
+	color:#717171;
+	line-height:30px
+}
+.home .itemlist .item .left .goods {
+	clear:both;
+	position:relative;
+	margin:0 20px 0 18px;
+	border:solid 1px #e8e8e8;
+	background-color:#fff
+}
+.home .itemlist .item .left .goods .img {
+	position:absolute;
+	left:10px;
+	top:10px
+}
+.home .itemlist .item .left .goods .text {
+	margin:10px 0 0 90px;
+	height:120px;
+	line-height:25px;
+	color:#717171;
+	font-family:SimSun
+}
+.home .itemlist .item .left .goods .text i {
+	color:#f34fa0
+}
+.home .itemlist .item .left .goods .text p {
+	display:block;
+	white-space:nowrap;
+	overflow:hidden
+}
+.home .itemlist .item .left .goods .ico {
+	background:url(../images/koubei/tm.png) no-repeat 0 0;
+	position:absolute;
+	left:10px;
+	top:-5px;
+	width:63px;
+	height:27px;
+	line-height:27px;
+	color:#fff;
+	font-weight:bold;
+	font-size:12px;
+	text-align:center
+}
+.home .itemlist .left .time {
+	width:68px;
+	float:left;
+	display:inline;
+	text-align:center;
+	margin-bottom:18px
+}
+.home .itemlist .left .time .t1 {
+	text-align:center;
+	height:32px;
+	line-height:32px;
+	color:#fff;
+	font-size:16px;
+	font-family:'Microsoft Yahei';
+	background-color:#f34fa0;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-top-left-radius:5px;
+	-ms-border-top-left-radius:5px;
+	-o-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-top-right-radius:5px;
+	-ms-border-top-right-radius:5px;
+	-o-border-top-right-radius:5px;
+	border-top-right-radius:5px
+}
+.home .itemlist .left .time .t2 {
+	text-align:center;
+	height:32px;
+	line-height:32px;
+	color:#f34fa0;
+	font-size:16px;
+	font-family:'Microsoft Yahei';
+	border:solid 1px #dadada;
+	border-top:0;
+	font-size:12px;
+	background-color:#fff
+}
+.home .itemlist .right {
+	width:645px;
+	float:left
+}
+.home .itemlist .right .kbs {
+	margin:0 45px;
+	line-height:24px;
+	color:#717171
+}
+.home .itemlist .right .kbs .ti .t {
+	float:left;
+	font-size:14px;
+	color:#f34fa0;
+	padding:0 0 18px 0;
+	font-weight:bold;
+	line-height:20px
+}
+.home .itemlist .right .kbs .ti .e {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	float:right;
+	margin-top:4px
+}
+.home .itemlist .right .kbs .ti .b {
+	background:url(../images/koubei/star.png) no-repeat 0 -20px;
+	height:12px;
+	display:block
+}
+.home .itemlist .right .kbs .pics {
+	margin-bottom:15px;
+	clear:both
+}
+.home .itemlist .right .kbs .pics img {
+	vertical-align:top;
+	margin-right:18px;
+	width:85px;
+	height:85px
+}
+.home .itemlist .right .kbs .inf {
+	clear:both;
+	padding-top:10px
+}
+.home .itemlist .right .kbs .zan {
+	float:left;
+	padding:0 0 0 23px;
+	background:url(../images/koubei/zan.png) no-repeat 0 center;
+	height:14px;
+	line-height:14px;
+	color:#f34fa1;
+	display:inline
+}
+.home .itemlist .right .kbs .reply {
+	float:right;
+	padding:0 0 0 23px;
+	background:url(../images/koubei/reply.png) no-repeat 0 center;
+	height:14px;
+	line-height:14px;
+	color:#f34fa1;
+	display:inline;
+	margin-right:0
+}
+.home .itemlist .right .mod2,.home .itemlist .right .mod3 {
+	margin:0 45px;
+	line-height:24px;
+	color:#717171;
+	font-family:SimSun
+}
+.home .itemlist .right .mod2 .img {
+	width:122px;
+	height:122px;
+	float:left
+}
+.home .itemlist .right .mod2 .text {
+	width:175px;
+	height:122px;
+	float:left;
+	margin-left:18px;
+	display:inline
+}
+.home .itemlist .right .mod2 p {
+	clear:both;
+	padding-top:7px
+}
+.home .itemlist .right .mod2 a {
+	color:#f34fa0
+}
+.home .itemlist .right .mod2 .p1 {
+	font-size:14px;
+	font-weight:bold
+}
+.home .itemlist .right .mod2 .pf {
+	clear:both
+}
+.home .itemlist .right .mod2 .pf span {
+	float:left
+}
+.home .itemlist .right .mod2 .pf .e {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	float:left;
+	margin-top:5px
+}
+.home .itemlist .right .mod2 .pf .b {
+	background:url(../images/koubei/star.png) no-repeat 0 -20px;
+	height:12px;
+	display:block
+}
+.home .itemlist .right .mod2 .sum {
+	width:228px;
+	height:122px;
+	float:left;
+	border-left:dashed 1px #dadada
+}
+.home .itemlist .right .mod3 .img {
+	width:122px;
+	height:122px;
+	float:left
+}
+.home .itemlist .right .mod3 .text {
+	float:left;
+	margin-left:18px;
+	display:inline;
+	width:405px
+}
+.home .itemlist .right .mod3 .t {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:12px
+}
+.home .itemlist .right .mod3 .t a {
+	color:#f34fa0
+}
+.home .itemlist .right .mod3 .p1 {
+	margin-bottom:12px
+}
+.home .itemlist .right .mod3 .p2 {
+	color:#a8a8a8
+}
+.home .itemlist .right .mod3 .p2 i {
+	color:#f34fa0;
+	margin-right:10px
+}
+.koubei .detail .itemAndUser {
+	padding:18px;
+	margin-bottom:0
+}
+.koubei .detail .itemAndUser .user {
+	background:url(../images/koubei/detailinfobg1.png) no-repeat 0 0;
+	width:180px;
+	height:180px;
+	float:left;
+	text-align:center;
+	padding:15px 0 0 0
+}
+.koubei .detail .kbUserHead {
+	background-color:#fff;
+	overflow:hidden;
+	zoom:1;
+	position:relative
+}
+.koubei .detail .kbUserHead .avatar {
+	width:75px;
+	height:75px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	margin-bottom:6px;
+	float:left;
+	margin-left:30px;
+	display:inline
+}
+.koubei .detail .kbUserHead .articleDesc {
+	float:left;
+	margin-left:15px;
+	display:inline
+}
+.koubei .detail .kbUserHead .articleDesc h5 {
+	font-size:16px;
+	color:#717171;
+	padding:13px 0 15px 0
+}
+.koubei .detail .kbUserHead .articleDesc .desc {
+	color:#a8a8a8;
+	position:relative
+}
+.koubei .detail .kbUserHead .articleDesc .desc i {
+	font-style:normal;
+	margin-right:20px;
+	color:#f34fa0
+}
+.koubei .detail .kbUserHead .re_valuable {
+	width:35px;
+	height:48px;
+	background:url(../images/valuable.png) no-repeat;
+	display:block;
+	float:right
+}
+.koubei .detail .kbUserHead .r {
+	margin-right:30px
+}
+.koubei .detail .kbUserHead .rank {
+	float:right;
+	margin:15px 5px 0 0
+}
+.koubei .detail .kbUserHead .rank .b {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	float:right;
+	margin-top:2px
+}
+.koubei .detail .kbUserHead .rank .c {
+	background:url(../images/koubei/star.png) no-repeat 0 -20px;
+	height:12px;
+	display:block
+}
+.detail .itemAndUser .iteminfo {
+	background:#fbfbfb url(../images/koubei/detailtopbg.png) no-repeat right 0;
+	float:right;
+	padding:38px 0 35px 0;
+	width:100%
+}
+.koubei .detail .itemAndUser .user .name {
+	font-size:16px;
+	color:#fff;
+	position:relative
+}
+.koubei .detail .itemAndUser .user .name a {
+	color:#fff
+}
+.koubei .detail .itemAndUser .user .name .i {
+	padding:1px 5px 1px 7px;
+	background:#ff77a5 url(../images/koubei/arr2.png) no-repeat 0 center;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	font-style:normal;
+	color:#fff;
+	line-height:12px;
+	font-size:12px;
+	position:relative
+}
+.koubei .detail .itemAndUser .user .p2 {
+	margin:0 15px;
+	color:#fff;
+	font-family:SimSun;
+	line-height:20px
+}
+.detail .itemAndUser .iteminfo .img {
+	width:122px;
+	height:122px;
+	float:left
+}
+.detail .itemAndUser .iteminfo .pd {
+	float:left;
+	display:inline;
+	margin:0 0 0 10px;
+	width:450px
+}
+.detail .itemAndUser .iteminfo .text {
+	float:left;
+	width:310px;
+	margin:0 0 0 13px
+}
+.detail .itemAndUser .itemif2 {
+	float:left;
+	width:205px;
+	height:120px
+}
+.detail .itemAndUser .iteminfo .text .p1 {
+	font-size:14px;
+	font-weight:bold
+}
+.detail .itemAndUser .iteminfo a {
+	color:#f34fa0
+}
+.detail .itemAndUser .iteminfo .text .p2 {
+	height:20px;
+	padding:15px 0 12px 0
+}
+.detail .itemAndUser .iteminfo .text .p2 span {
+	float:left
+}
+.detail .itemAndUser .iteminfo .text .p2 .b,.detail .itemAndUser .iteminfo .text .p2 .c {
+	background:url(../images/koubei/star.png) no-repeat 0 0;
+	height:12px;
+	width:73px;
+	float:left
+}
+.detail .itemAndUser .iteminfo .text .p2 .c {
+	background-position:0 -20px;
+	margin:0
+}
+.detail .itemAndUser .iteminfo .tobuy {
+	background-color:#f34fa1;
+	display:block;
+	color:#fff;
+	font-size:16px;
+	font-family:'Microsoft YaHei';
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	text-align:center;
+	margin:12px 35px 0 0;
+	line-height:32px;
+	height:32px;
+	width:120px
+}
+.detail .detailContent {
+	padding:0 18px
+}
+.detail .chicTextContent {
+	padding:18px
+}
+.detail .chicTextContent .ct {
+	background-color:#fbfbfb;
+	padding:0 18px 18px 18px
+}
+.detail .detailContent h5 {
+	font-size:16px;
+	font-family:'Microsoft YaHei';
+	text-align:center;
+	color:#f34fa1;
+	padding:25px 0 20px 0
+}
+.detail .detailContent .pics {
+	padding-top:18px
+}
+.detail .detailContent .pics img {
+	vertical-align:top;
+	margin-right:21px;
+	width:118px;
+	height:118px;
+	float:left
+}
+.detail .detailContent .textinfo {
+	height:25px;
+	border-bottom:solid 1px #dadada;
+	clear:both
+}
+.detail .detailContent .textinfo .time {
+	float:left
+}
+.detail .detailContent .textinfo .cont {
+	float:right
+}
+.detail .detailContent .textinfo .cont i {
+	color:#f34fa0;
+	margin-right:17px
+}
+.detail .detailContent .textinfo .cont .zan {
+	float:right;
+	background:url(../images/koubei/zan.png) no-repeat 0 0;
+	width:17px;
+	height:14px;
+	margin-left:-3px
+}
+.detail .detailContent .text {
+	padding-top:20px;
+	line-height:1.86;
+	color:#717171;
+	clear:both;
+	margin-bottom:20px
+}
+.detail .detailContent .text p {
+	font-size:14px;
+	line-height:1.86;
+	font-family:Arial,SimSun;
+	margin:0 0 .8em 0
+}
+.detail .detailContent .shares {
+	color:#717171;
+	height:47px;
+	background-color:#f4f4f4;
+	border-bottom:solid 1px #e9e9e9;
+	line-height:47px;
+	text-indent:20px
+}
+.detail .detailContent .shares b {
+	font-size:14px;
+	color:#f34fa1;
+	margin:0 3px
+}
+.detail .detailContent .shares .zen {
+	width:96px;
+	height:31px;
+	line-height:31px;
+	font-family:'Microsoft Yahei';
+	font-size:14px;
+	float:right;
+	background-color:#f34fa1;
+	text-align:center;
+	text-indent:0;
+	color:#fff;
+	padding:0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	margin-top:7px;
+	margin-right:10px
+}
+.detail .detailContent .sharesPerson {
+	background-color:#fff;
+	border:solid 1px #e9e9e9;
+	position:relative;
+	height:67px;
+	padding:8px 0 0 0;
+	top:-1px
+}
+.detail .detailContent .sharesPerson .arr {
+	position:absolute;
+	width:15px;
+	height:8px;
+	top:-8px;
+	right:50px;
+	background:url(../images/koubei/arr4.png) no-repeat 0 0
+}
+.detail .detailContent .sharesPerson a {
+	width:71px;
+	float:left;
+	text-align:center;
+	color:#f34fa1
+}
+.detail .detailContent .sharesPerson img {
+	margin-bottom:1px;
+	width:45px;
+	height:45px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%
+}
+.detail .replayarea {
+	padding:10px 0 0 0
+}
+.detail .replayarea .t {
+	border-bottom:solid 1px #dadada;
+	padding:10px 0 9px 0;
+	font-size:14px;
+	color:#ff77a5;
+	margin-bottom:20px
+}
+.detail .replayarea .cxt {
+	padding:0 18px 18px 18px;
+	position:relative
+}
+.detail .replayarea .cxt .mask {
+	position:absolute;
+	top:0;
+	left:0;
+	height:115px;
+	background-color:rgba(0,0,0,0.1);
+	width:668px;
+	margin:0 18px
+}
+.detail .replayarea .cxt .mask p {
+	line-height:110px;
+	text-align:center
+}
+.detail .replayarea .cxt .mask a {
+	color:#f34fa1;
+	margin:0 5px;
+	text-decoration:underline
+}
+.detail .replayarea .replySuccessTips {
+	text-align:center;
+	color:#fff;
+	background-color:#f34fa1;
+	font-size:14px;
+	border-radius:5px;
+	padding:5px 20px;
+	position:absolute;
+	left:50%;
+	top:40%
+}
+.detail .replayarea .cxt .end {
+	text-align:center;
+	padding:0 0 30px 0
+}
+.detail .replayarea .cxt .end .retry {
+	color:#f34fa1
+}
+.detail .replayarea .textarea {
+	width:99%;
+	padding:2px 3px 2px 5px;
+	margin:0;
+	height:110px;
+	border:solid 1px #e9e9e9;
+	resize:none
+}
+.detail .replayarea .t2 {
+	padding-top:8px;
+	color:#a8a8a8;
+	height:42px
+}
+.detail .replayarea .cel .t2 {
+	height:22px
+}
+.detail .replayarea .t2 .cont {
+	float:left
+}
+.detail .replayarea .t2 .sub {
+	float:right;
+	border:1px solid #cdcdcd;
+	background:#e7e7e7;
+	background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e7e7e7));
+	background:-webkit-linear-gradient(top,#fff,#e7e7e7);
+	background:-moz-linear-gradient(top,#fff,#e7e7e7);
+	background:-ms-linear-gradient(top,#fff,#e7e7e7);
+	background:-o-linear-gradient(top,#fff,#e7e7e7);
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	color:#717171;
+	font-size:12px;
+	font-family:Georgia,serif;
+	text-decoration:none;
+	height:25px;
+	width:70px;
+	text-align:center;
+	line-height:25px;
+	margin-right:5px
+}
+.detail .replayarea .cxt .cel {
+	border-top:dashed 1px #dadada;
+	padding:15px 0 20px 0;
+	position:relative;
+	overflow:hidden
+}
+.detail .replayarea .cxt .cel .avatar {
+	width:45px;
+	height:45px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	position:absolute;
+	left:0;
+	top:15px
+}
+.detail .replayarea .cxt .cel .name {
+	float:left;
+	margin:0 0 0 55px;
+	font-weight:normal;
+	font-family:Simsun
+}
+.detail .replayarea .cxt .cel .name a {
+	color:#f34fa1;
+	font-family:Tahoma;
+	font-weight:bold
+}
+.detail .replayarea .cxt .cel .time {
+	float:right;
+	color:#9c9a9c
+}
+.detail .replayarea .cxt .cel .tex {
+	clear:both;
+	margin-left:55px;
+	padding:8px 0 0 0;
+	line-height:18px;
+	color:#717171
+}
+.detail .replayarea .cxt .cel .r,.detail .replayarea .cxt .cel .rn {
+	color:#f34fa1;
+	text-decoration:underline
+}
+.detail .replayarea .cel .rpa {
+	padding:20px 20px 0 20px
+}
+.detail .drhead {
+	padding:20px 18px;
+	position:relative;
+	overflow:visible
+}
+.detail .drhead .h {
+	width:100%;
+	background:#85c1ff url(../images/koubei/chicdtbg.png) repeat-x 0 0;
+	padding:15px 0 0 0;
+	position:relative;
+	height:118px
+}
+.detail .drhead .tochic {
+	height:144px;
+	width:34px;
+	position:absolute;
+	left:-34px;
+	top:15px;
+	background:url(../images/koubei/todaren.png) no-repeat 0 0
+}
+.detail .drhead .avatar {
+	float:left;
+	width:102px;
+	height:102px;
+	margin:0 0 0 18px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	margin-bottom:6px
+}
+.detail .drhead .textd {
+	margin:0 25px 0 140px;
+	color:#fff
+}
+.detail .drhead .textd .t {
+	margin-bottom:15px
+}
+.detail .drhead .textd .t b {
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+	margin-right:18px
+}
+.detail .drhead .textd .chicd {
+	line-height:18px
+}
+.detail .chicTextContent .textinfo {
+	margin-bottom:18px
+}
+.detail .chicTextContent .pics {
+	border:solid 1px #e8e8e8;
+	padding:14px 0 14px 14px;
+	background-color:#fff;
+	position:relative
+}
+.detail .chicTextContent .pics .c {
+	position:relative;
+	float:left
+}
+.detail .chicTextContent .pics .goodsInArt {
+	float:left;
+	position:relative
+}
+.detail .chicTextContent .pics .inSale {
+	position:absolute;
+	left:0;
+	top:-5px;
+	background:url(../images/koubei/tm2.png) no-repeat 0 0;
+	width:60px;
+	height:27px;
+	text-align:center;
+	color:#fff;
+	line-height:25px
+}
+.detail .chicTextContent .pics img {
+	width:82px;
+	height:82px;
+	margin:0 10px 10px 0;
+	border:solid 1px #dedede
+}
+.detail .chicTextContent .pics .tt {
+	font-size:14px;
+	color:#717171;
+	font-weight:bold;
+	margin-bottom:10px
+}
+.detail .chicTextContent .pics .inSalePop {
+	position:absolute;
+	background-color:#fff;
+	border:solid 1px #e8e8e8;
+	-webkit-box-shadow:6px 6px 0 0 rgba(225,225,225,0.5);
+	box-shadow:6px 6px 0 0 rgba(225,225,225,0.5);
+	padding:10px 10px 0 10px;
+	left:50px;
+	top:50px;
+	display:none;
+	z-index:200;
+	width:285px
+}
+.detail .chicTextContent .pics .onHover .inSalePop {
+	display:block
+}
+.detail .chicTextContent .pics .tx {
+	width:190px;
+	float:left;
+	line-height:21px;
+	font-size:12px;
+	font-family:SimSun
+}
+.detail .chicTextContent .pics .tx i {
+	color:#f34fa0
+}
+.pcdetail h5 {
+	font-size:25px;
+	font-family:SimSun;
+	font-weight:bold;
+	color:#f34fa0;
+	padding:7px 0 25px 0;
+	text-align:center
+}
+.pcdetail .tinf {
+	border-bottom:solid 1px #dadada;
+	color:#a8a8a8;
+	padding-bottom:10px;
+	margin-bottom:0
+}
+.pcdetail .pddetail {
+	border:solid 1px #e8e8e8;
+	-webkit-border-radius:1px;
+	-moz-border-radius:1px;
+	-ms-border-radius:1px;
+	-o-border-radius:1px;
+	border-radius:1px;
+	overflow:hidden;
+	width:305px;
+	float:left;
+	padding:10px;
+	background-color:#fff
+}
+.pcdetail .d2 {
+	float:right
+}
+.pcdetail .pddetail .tx {
+	width:190px;
+	float:left;
+	line-height:21px;
+	font-size:12px;
+	font-family:SimSun
+}
+.pcdetail .pddetail .tx i {
+	color:#f34fa0
+}
+.pcdetail .pddetail .goodsInArt {
+	float:left;
+	position:relative
+}
+.pcdetail .pddetail .inSale {
+	position:absolute;
+	left:0;
+	top:-5px;
+	background:url(../images/koubei/tm2.png) no-repeat 0 0;
+	width:60px;
+	height:27px;
+	text-align:center;
+	color:#fff;
+	line-height:25px
+}
+.pcdetail .contents .section {
+	padding:18px
+}
+.pcdetail .contents .cont {
+	background-color:#fbfbfb;
+	padding:18px
+}
+.pcdetail .pddetail img {
+	width:82px;
+	height:82px;
+	margin:0 10px 10px 0;
+	vertical-align:top
+}
+.pcdetail .detaild {
+	clear:both;
+	color:#717171;
+	line-height:24px;
+	padding:10px 0 30px 0
+}
+.pcdetail .detaild table {
+	border-collapse:collapse
+}
+.pcdetail .shares {
+	color:#717171;
+	height:47px;
+	line-height:47px;
+	text-indent:20px
+}
+.pcdetail .shares b {
+	font-size:14px;
+	color:#f34fa1;
+	margin:0 3px
+}
+.pcdetail .shares .zen {
+	width:96px;
+	height:31px;
+	line-height:31px;
+	font-family:'Microsoft Yahei';
+	font-size:14px;
+	float:right;
+	background-color:#f34fa1;
+	text-align:center;
+	text-indent:0;
+	color:#fff;
+	padding:0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	margin-top:7px
+}
+.popwin {
+	overflow:hidden;
+	background-color:#fff
+}
+.popwin .close {
+	background:url(../images/koubei/popclose.png) no-repeat 0 0;
+	width:16px;
+	height:15px;
+	position:absolute;
+	right:11px;
+	top:12px;
+	z-index:200
+}
+.popwin .popconn {
+	padding:15px 23px;
+	line-height:1.8
+}
+.popwin .applyDr {
+	width:600px
+}
+.popwin .applyDr p {
+	line-height:18px;
+	color:#717171;
+	margin-bottom:15px
+}
+.popwin .popconn i {
+	color:#f34fa0
+}
+.popwin .popconn .f16 {
+	font-size:14px;
+	color:#717171;
+	font-family:'Microsoft Yahei'
+}
+.popwin .popconn .applyrule {
+	border-top:solid 1px #dadada;
+	padding-top:15px
+}
+.popwin .popconn .ss {
+	border-top:solid 1px #dadada;
+	margin:25px 0 0 0;
+	padding:15px 0 10px 0
+}
+.popwin .popconn .ss p {
+	text-align:center
+}
+.popwin .popconn .toweibo {
+	color:#fff;
+	background-color:#85c1ff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	padding:8px 15px;
+	display:inline-block
+}
+.popwin .editDrDesc {
+	width:520px
+}
+.popwin .editDrDesc .drDesc {
+	width:99%;
+	padding:0;
+	margin:0;
+	height:80px;
+	border:solid 1px #e9e9e9;
+	resize:none
+}
+.popwin .editDrDesc p {
+	text-align:left;
+	line-height:24px;
+	color:#717171;
+	margin-bottom:6px
+}
+.popwin .editDrDesc .p1 {
+	text-align:right
+}
+.popwin .editDrDesc .submit {
+	background-color:#ff77a5;
+	font-size:14px;
+	padding:2px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	display:inline-block;
+	color:#fff
+}
+.shares .jiathis_style_24x24 a {
+	margin-top:13px
+}
+#loaderCircle {
+	display:none;
+	background:url(../images/loading.gif) no-repeat center center;
+	height:50px
+}
+.koubei .crumbs {
+	margin:0 0 10px 0;
+	font-family:SimSun
+}

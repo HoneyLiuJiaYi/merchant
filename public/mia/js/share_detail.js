@@ -1,0 +1,1 @@
+$(function(){var a=$("#share_pic").val();var b=$("#share_name").val();$.each($("a[mars_sead*=m_account_invite_]"),function(c,d){$(d).click(function(){var e=$(d).attr("mars_sead");$.doshare("",a,b,e)})})});

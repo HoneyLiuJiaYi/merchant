@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://www.xiangxi.com:8088/index. =>/merchant/login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商户登录-享洗小组</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="./public/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./public/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="./public/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./public/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="./public/blue.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition login-page" style="padding-bottom: 26px;">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="http://www.xiangxi.com"><b>Merchant</b>login</a>
+    </div><!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">商户登录</p>
+            <form id='login_form' action="" method="post">
+            <input type="hidden" name="_token" value="YRLfbuLTqQGaCrEGn02ClY9IfttkQLnPRKMELtv7">
+            <div class="form-group has-feedback">
+                <input type="text" name="mail" class="form-control" value="" placeholder="email">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" name="password" class="form-control" value="" placeholder="Password">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" name="remme" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> 
+                        </label>
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-xs-4">
+                    <button id='submitButton' type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <a href="http://www.xiangxi.com:8088/index. =>/merchant/forgetpassword" class="text-center">忘记密码？</a>
+                </div><!-- /.col -->
+            </div>
+        </form>
+        <a href="./register.html" class="text-center">没有帐号？申请商户</a>
+    </div><!-- /.login-box-body -->
+</div><!-- /.login-box -->
+
+<!-- jQuery 2.1.4 -->
+<script src="./public/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="./public/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="./public/icheck.min.js"></script>
+<script>
+    $('#submitButton').click(function(){
+        var url = 'http://180.76.141.171/login/create';
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:url,
+            data:$('#login_form').serialize(),// 你的formid
+            async: false,
+            error: function(request) {
+                alert("Connection error");
+            },
+            success: function(data) {
+                if (data.status=='0') {
+                    alert('登录成功');
+                    localStorage.m_id = data.data.merchant.id;
+                    localStorage.nick = data.data.merchant.nick;
+                    localStorage.mail = data.data.merchant.mail;
+                    localStorage.mobile = data.data.merchant.mobile;
+                    localStorage.rename = data.data.merchant.rename;
+                    localStorage.license = data.data.merchant.license;
+                    localStorage.comment = data.data.merchant.comment;
+                    localStorage.logo = data.data.merchant.logo;
+                    localStorage.card = data.data.merchant.card;
+                    localStorage.sex = data.data.merchant.sex;
+                    window.location.href = "./index.html";
+                }else{
+                    alert('用户名或密码错误！');
+                }
+            }
+        });
+        return false;
+    });
+
+</script>
+<link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
+<!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
+
+
+
+</body></html>

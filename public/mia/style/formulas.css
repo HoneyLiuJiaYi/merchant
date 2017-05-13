@@ -1,0 +1,624 @@
+@charset "UTF-8";
+	.nfFocus {
+	position:relative;
+	overflow:hidden;
+	height:343px;
+	clear:both
+}
+.nfFocus ul {
+	width:800%
+}
+.nfFocus li {
+	float:left;
+	height:343px;
+	width:100%;
+	background-repeat:no-repeat
+}
+.nfFocus li.cell {
+	display:none;
+	position:absolute
+}
+.nfFocus li.cur {
+	display:block
+}
+.nfFocus li a {
+	display:block;
+	width:744px;
+	height:100%;
+	position:absolute;
+	left:50%;
+	margin-left:-500px
+}
+.nfFocus li div {
+	display:block;
+	width:100%;
+	height:100%;
+	background-position:center top;
+	background-repeat:no-repeat
+}
+.nfFocus .onBlock {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:244px;
+	width:256px
+}
+.nfFocus .onBlock img {
+	vertical-align:top
+}
+.nfFocus .pointbox {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-500px;
+	width:744px;
+	height:20px;
+	text-align:center
+}
+.nfFocus .point {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	height:20px;
+	padding-left:10px;
+	background:url(../images/nf_ele.png) left -20px no-repeat;
+	z-index:10
+}
+.nfFocus .point>span {
+	float:left;
+	position:relative;
+	left:-1px;
+	padding-right:3px;
+	height:20px;
+	line-height:20px;
+	background:url(../images/nf_ele.png) right top no-repeat
+}
+.nfFocus .point i {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-right:7px;
+	width:12px;
+	height:20px;
+	background:url(../images/nf_ele.png) -144px -20px no-repeat;
+	cursor:pointer
+}
+.nfFocus .point i:hover,.nfFocus .point i.cur {
+	background-position:-164px -20px
+}
+.nfFocus .leftAr:link,.nfFocus .rightAr:link {
+	display:none;
+	position:absolute;
+	top:150px;
+	width:33px;
+	height:54px;
+	cursor:pointer;
+	background:url(../images/index_j_btn.png) no-repeat;
+	z-index:27
+}
+.nfFocus .leftAr:link {
+	left:0
+}
+.nfFocus .rightAr:link {
+	right:0;
+	background-position:right 0
+}
+.promSeciton {
+	position:relative;
+	margin-top:-97px;
+	z-index:27
+}
+.nfFocus .arNav {
+	position:relative;
+	z-index:27
+}
+.nfFocus .arNav .w1004 {
+	position:relative;
+	width:744px;
+	position:absolute;
+	left:50%;
+	margin-left:-500px
+}
+.nfFilt {
+	position:fixed;
+	top:0;
+	z-index:100;
+	background:#f9f9f9;
+	width:1000px
+}
+.nfFilt .filtBox {
+	margin:5px 0 0 0
+}
+.nfBar {
+	display:none
+}
+.nfBox {
+	height:138px !important;
+	overflow:hidden
+}
+.nfLogo {
+	height:105px;
+	overflow:hidden;
+	position:relative
+}
+.filtBox {
+	margin:15px 0 20px 0;
+	background-color:#fff;
+	border:1px solid #f2f2f2
+}
+.filtBox dl {
+	padding:15px 0;
+	border-bottom:1px solid #f2f2f2;
+	overflow:hidden;
+	*zoom:1
+}
+.filtBox dt {
+	float:left;
+	padding:0 25px;
+	width:80px;
+	color:#666
+}
+.filtBox dd {
+	float:left;
+	width:860px
+}
+.filtBox .brand dt {
+	padding:10px 25px
+}
+.filtBox .brand-logo {
+	float:left;
+	padding-bottom:2px;
+	width:760px
+}
+.filtBox .brand-logo img {
+	vertical-align:top
+}
+.filtBox .brand-logo .bitem {
+	position:relative;
+	float:left;
+	margin:0 -1px -1px 0;
+	border:1px solid #f2f2f2;
+	width:106px;
+	height:52px
+}
+.filtBox .brand-logo .bitem img {
+	width:100%;
+	height:100%
+}
+.filtBox .brand-logo .bitem .txt {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	background-color:#ff69b4;
+	color:#fff;
+	cursor:default
+}
+.filtBox .brand-logo .bitem .txt p {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle
+}
+.filtBox .brand-logo .bitem .txt i {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	height:100%;
+	vertical-align:middle
+}
+.filtBox .brand-logo .bitem .txt .f16 {
+	font-size:14px !important
+}
+.filtBox .brand-logo .bitem.hover .txt {
+	display:block;
+	cursor:pointer
+}
+.filtBox .brand-more {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-right:6px;
+	padding:0 18px 0 10px;
+	border:1px solid #d5d5d5;
+	height:24px;
+	line-height:24px;
+	float:right;
+	background:url(../images/nf_ele.png) 3.2em -40px no-repeat;
+	cursor:pointer
+}
+.filtBox .brand-more:hover {
+	color:#666
+}
+.filtBox .brand-more.cur {
+	background-position:3.2em -64px
+}
+.filtBar {
+	padding:12px;
+	border:1px solid #e9e9e9;
+	background-color:#fff;
+	width:975px;
+	margin-left:-1px
+}
+.filtBar .sbtn {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	margin:0 5px;
+	padding:0 15px;
+	height:26px;
+	line-height:26px;
+	border:1px solid #e6e6e6;
+	color:#666;
+	cursor:pointer
+}
+.filtBar .sbtn i {
+	display:none;
+	vertical-align:-4px;
+	*vertical-align:-1px;
+	margin-left:3px;
+	width:12px;
+	height:16px;
+	background:url(../images/nf_ele.png) -20px -44px;
+	no-repeat
+}
+.filtBar .sbtn.cur {
+	border-color:#ff69b4;
+	background-color:#ff69b4;
+	color:#fff
+}
+.filtBar .sbtn.cur i {
+	background-position:-20px -68px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1
+}
+.filtBar .sbtn.cur i.asc {
+	background-position:-82px -44px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1
+}
+.filtBox .brand-logo .bitem.mlogo img {
+	display:inline-block;
+	margin-left:10.6px;
+	margin-top:5.2px;
+	width:80%;
+	height:80%
+}
+.filtBar .checkbox {
+	margin-left:30px
+}
+.filtBar input.goods {
+	margin-right:3px;
+	vertical-align:-3px;
+	*vertical-align:-2px
+}
+.filtBar .rt {
+	float:right;
+	margin-right:10px;
+	line-height:28px
+}
+.filtBar .rt em {
+	font-style:normal;
+	color:#ff69b4;
+	font-family:Arial;
+	font-size:14px
+}
+.filtBar .filtmore {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	margin:0 0 0 20px;
+	padding:0 5px 0 15px;
+	height:28px;
+	line-height:28px;
+	color:#fff;
+	background-color:#ff69b4;
+	cursor:pointer
+}
+.filtBar .filtmore i {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	*vertical-align:middle;
+	width:24px;
+	height:24px;
+	background:url(../images/nf_ele.png) -48px -64px no-repeat
+}
+.filtBar .filtmore.cur i {
+	background-position:-48px -40px
+}
+.filtBox dd>a {
+	margin:0 15px 0 5px
+}
+.nfWrap {
+	width:1000px;
+	margin:0 auto;
+	margin-bottom:25px
+}
+.nfCon {
+	margin-top:20px;
+	position:relative;
+	*zoom:1
+}
+.nfTitle {
+	margin:5px 0;
+	padding-bottom:5px;
+	font-size:20px;
+	font-family:'微软雅黑'
+}
+.nfTitle em {
+	margin-left:5px;
+	font-style:normal;
+	font-size:22px
+}
+.nfTitle .flag {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:-6px;
+	margin-right:8px;
+	width:45px;
+	height:28px;
+	background:url(../images/flag.png) no-repeat
+}
+.nfTitle .flagAU {
+	background-position:0 0
+}
+.nfTitle .flagDE {
+	background-position:-47px 0
+}
+.nfTitle .flagGB {
+	background-position:-94px 0
+}
+.nfTitle .flagIE {
+	background-position:-141px 0
+}
+.nfTitle .flagNL {
+	background-position:-188px 0
+}
+.nfTitle .flagNZ {
+	background-position:-235px 0
+}
+.nfTitle .flagUS {
+	background-position:-282px 0
+}
+.nfTitle .flagRS {
+	background-position:-328px 0
+}
+.nfTitle .flagHK {
+	background-position:-376px 0
+}
+.nfTitle .flagJP {
+	background:url(../images/c270518411e4182d7a37f0707a80e40f.jpg)
+}
+.nfTitle .flagCN {
+	background:url(../images/b697b5050a2c7f076b28349d8d541bb8.jpg)
+}
+.nfTitle .flagDK {
+	background:url(../images/ba2249528e41ff01db6eb89bc0fe037f.jpg)
+}
+.nfList {
+	border-top:2px solid #c1c1c1;
+	border-left:1px solid #e8e8e8;
+	margin-right:-1px
+}
+.nfShow>img {
+	width:249px;
+	height:364px
+}
+.nfShow,.nfItem {
+	position:relative;
+	margin-left:-1px;
+	width:249px;
+	height:364px;
+	border:1px solid #e8e8e8;
+	border-width:0 1px 1px 1px;
+	float:left;
+	background-color:#fff
+}
+.nfItem:hover {
+	position:relative;
+	box-shadow:0 0 13px #d4d4d4;
+	z-index:1
+}
+.nfPic {
+	width:248px;
+	height:228px;
+	margin:6px 0
+}
+.nfPic img {
+	width:100%;
+	height:100%
+}
+.nfSc {
+	background:url(../images/nfsalecount.gif) no-repeat;
+	width:174px;
+	height:25px;
+	margin:0 auto;
+	color:#949494;
+	text-align:center;
+	line-height:24px
+}
+.nfSc .f12 {
+	font-size:12px;
+	margin-left:3px
+}
+.nfSc .f14 {
+	font-size:14px
+}
+.nfSn {
+	background:url(../images/nfsalenew.gif) no-repeat;
+	width:174px;
+	height:25px;
+	margin:0 auto;
+	color:#fff;
+	text-align:center;
+	line-height:24px
+}
+.nfPrice {
+	margin:10px 0 5px 20px;
+	color:#ff69b4
+}
+.nfPrice .nfp1 {
+	font-size:16px
+}
+.nfPrice .nfp2 {
+	font-size:24px
+}
+.nfPrice .nfp3 {
+	color:#b3b3b3;
+	font-size:12px;
+	text-decoration:line-through;
+	margin-left:8px
+}
+.nfDes {
+	margin:0 20px 0 20px;
+	line-height:20px;
+	height:40px;
+	overflow:hidden
+}
+.saleout {
+	width:111px;
+	height:109px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-94px 0 0 -55px;
+	overflow:hidden;
+	z-index:20;
+	background:url(../images/saleout.png) no-repeat
+}
+.filtTerm {
+	border:1px solid #f2f2f2;
+	border-top:0;
+	margin:0 0 15px 0;
+	background-color:#fff;
+	margin-top:-1px
+}
+.filtTerm dl {
+	padding:15px 0;
+	border-bottom:1px solid #f2f2f2;
+	overflow:hidden;
+	*zoom:1
+}
+.filtTerm dt {
+	float:left;
+	padding:0 25px;
+	width:80px;
+	color:#666
+}
+.filtTerm dd {
+	float:left;
+	width:860px
+}
+.nflBox {
+	margin:15px 0 0 0
+}
+.nfctop {
+	border-top:1px solid #e8e8e8;
+	margin-top:15px
+}
+.setitle {
+	line-height:22px
+}
+.seterm {
+	border:1px solid #e8e8e8;
+	height:22px;
+	display:inline-block
+}
+.seterm span {
+	padding:5px;
+	display:inline-block;
+	float:left;
+	cursor:pointer
+}
+.seterm i {
+	background:url(../images/listbtn.png) -10px -0 no-repeat;
+	width:12px;
+	height:22px;
+	margin:0 5px;
+	display:inline-block;
+	cursor:pointer
+}
+.seterm-on {
+	border:1px solid #ff69b4;
+	height:22px;
+	display:inline-block
+}
+.seterm-on span {
+	padding:5px;
+	display:inline-block;
+	float:left;
+	cursor:pointer
+}
+.seterm-on i {
+	background-color:#ff69b4;
+	background:url(../images/listbtn.png) no-repeat -28px 0;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	cursor:pointer
+}
+.seterm:hover,.seterm-on:hover {
+	color:inherit
+}
+.sedot {
+	display:inline-block;
+	background:url(../images/listbtn.png) no-repeat 0 0;
+	width:10px;
+	height:22px;
+	margin:0 5px
+}
+.sedelall {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-right:6px;
+	padding:0 10px 0 10px;
+	border:1px solid #d5d5d5;
+	height:24px;
+	line-height:24px;
+	float:right;
+	cursor:pointer
+}
+.sedelall:hover {
+	color:#666
+}
+.pager {
+	padding:30px 0;
+	text-align:center
+}
+.pager a {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	background-color:#fff;
+	border:1px solid #e6e6e6;
+	padding:8px;
+	min-width:16px;
+	text-align:center;
+	margin:0 5px
+}
+.pager a.selected {
+	background-color:#ff69b4;
+	color:#fff
+}
+.nfWrap .proListTui {
+	margin-top:14px
+}
+.nfSc,.nfSn {
+	background:none !important;
+	overflow:hidden
+}
+.nfSc *,.nfSn * {
+	font-size:0 !important;
+	text-indent:-999em
+}

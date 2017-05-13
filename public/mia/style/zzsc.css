@@ -1,0 +1,18 @@
+body{
+	font-weight: 500;
+	font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+
+
+.content{
+	width: 100%;
+	
+
+}
+.starability-container{
+	width: 350px;
+	margin:0 auto;
+	padding: 2em 0;
+	border-bottom: 1px solid #D5D6E2;
+}
+.center{text-align: center;}

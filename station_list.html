@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.xiangxi.com/admin/merchant -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="znTlEIsix2DS0LyjKoCjMLEpZOrgDN2gNVaogKUW">
+    <title>享洗小组-商户驿站管理</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="public/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="public/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="public/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="public/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="public/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="public/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="public/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="public/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="public/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="public/daterangepicker-bs3.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="public/bootstrap3-wysihtml5.min.css">
+
+    <link rel="stylesheet" type="text/css" href="public/stylesheets">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style type="text/css">.jqstooltip {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+        background: rgb(0, 0, 0) transparent;
+        background-color: rgba(0, 0, 0, 0.6);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+        white-space: nowrap;
+        padding: 5px;
+        border: 1px solid white;
+        z-index: 10000;
+    }
+    .jqsfield {
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+    }</style>
+    
+</head>
+<body class="skin-blue sidebar-mini" style="padding-bottom: 26px;">
+
+<div class="wrapper">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="http://www.xiangxi.com/admin/index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="http://www.xiangxi.com/admin/merchant#" class="sidebar-toggle" data-toggle="offcanvas"
+               role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="http://www.xiangxi.com/admin/merchant#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <div class="slimScrollDiv"
+                                     style="position: relative; overflow: hidden; width: auto; height: 200px;">
+                                    <ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+                                        <li><!-- start message -->
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <div class="pull-left">
+                                                    <img src="public/1467688889165787.jpg" class="img-circle"
+                                                         alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <div class="pull-left">
+                                                    <img src="public/user3-128x128.jpg" class="img-circle"
+                                                         alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    AdminLTE Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <div class="pull-left">
+                                                    <img src="public/user4-128x128.jpg" class="img-circle"
+                                                         alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <div class="pull-left">
+                                                    <img src="public/user3-128x128.jpg" class="img-circle"
+                                                         alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <div class="pull-left">
+                                                    <img src="public/user4-128x128.jpg" class="img-circle"
+                                                         alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slimScrollBar"
+                                         style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail"
+                                         style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                            </li>
+                            <li class="footer"><a href="http://www.xiangxi.com/admin/merchant#">See All Messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="http://www.xiangxi.com/admin/merchant#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <div class="slimScrollDiv"
+                                     style="position: relative; overflow: hidden; width: auto; height: 200px;">
+                                    <ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <i class="fa fa-warning text-yellow"></i> Very long description here
+                                                that
+                                                may not fit into the page and may cause design problems
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <i class="fa fa-user text-red"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slimScrollBar"
+                                         style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail"
+                                         style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                            </li>
+                            <li class="footer"><a href="http://www.xiangxi.com/admin/merchant#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                        <a href="http://www.xiangxi.com/admin/merchant#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <div class="slimScrollDiv"
+                                     style="position: relative; overflow: hidden; width: auto; height: 200px;">
+                                    <ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+                                        <li><!-- Task item -->
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                         role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <h3>
+                                                    Create a nice theme
+                                                    <small class="pull-right">40%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-green" style="width: 40%"
+                                                         role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                        <span class="sr-only">40% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <h3>
+                                                    Some task I need to do
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-red" style="width: 60%"
+                                                         role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="http://www.xiangxi.com/admin/merchant#">
+                                                <h3>
+                                                    Make beautiful transitions
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-yellow" style="width: 80%"
+                                                         role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                    <div class="slimScrollBar"
+                                         style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail"
+                                         style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                            </li>
+                            <li class="footer">
+                                <a href="http://www.xiangxi.com/admin/merchant#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="http://www.xiangxi.com/admin/merchant#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="public/1467688889165787.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">xiangxi_bjtu</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="public/1467688889165787.jpg" class="img-circle" alt="User Image">
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <!--<li class="user-body">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Followers</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </li>-->
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="http://www.xiangxi.com/admin/index" class="btn btn-default btn-flat">返回</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="http://www.xiangxi.com/admin/loginout"
+                                       class="btn btn-default btn-flat">退出</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="http://www.xiangxi.com/admin/merchant#" data-toggle="control-sidebar"><i
+                                class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar" style="height: auto;">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="public/1467688889165787.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>xiangxi_bjtu</p>
+                    <a href="http://www.xiangxi.com/admin/merchant#"><i class="fa fa-circle text-success"></i>
+                        Online</a>
+                </div>
+            </div>
+            <!-- search form -->
+            <form action="http://www.xiangxi.com/admin/merchant#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i
+                        class="fa fa-search"></i></button>
+              </span>
+                </div>
+            </form>
+            <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="header">主功能区</li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-user-secret"></i> <span>管理员管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/manager"><i class="fa fa-users"></i>
+                            管理员列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/manager/create"><i class="fa fa-user-plus"></i> 添加管理员</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-user"></i> <span>用户管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/user"><i class="fa fa-users"></i> 用户列表</a>
+                        </li>
+                        <li><a href="http://www.xiangxi.com/admin/user/create"><i class="fa fa-user-plus"></i> 添加用户</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-group"></i> <span>商户管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/merchant"><i class="fa fa-users"></i>
+                            商户列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/merchant/create"><i class="fa fa-user-plus"></i> 添加商户</a>
+                        </li>
+                        <li class="active"><a href="http://www.xiangxi.com/admin/goods"><i
+                                class="fa  fa-shopping-cart"></i> 商品列表</a></li>
+                    </ul>
+                </li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-sitemap"></i> <span> 属性、分类、品牌管理</span> <i
+                            class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/attr"><i class="fa fa-map-o"></i> 属性列表</a>
+                        </li>
+                        <li><a href="http://www.xiangxi.com/admin/attr/create"><i class="fa fa-pencil-square-o"></i>
+                            添加属性</a></li>
+                        <li class="active"><a href="http://www.xiangxi.com/admin/cate"><i class="fa  fa-reorder"></i>
+                            分类列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/cate/create"><i class="fa  fa-pencil"></i> 添加分类</a>
+                        </li>
+                        <li class="active"><a href="http://www.xiangxi.com/admin/brand"><i class="fa fa-cc"></i>
+                            品牌列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/brand/create"><i class="fa fa-paint-brush"></i>
+                            添加品牌</a></li>
+                    </ul>
+                </li>
+
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-list-ol"></i> <span>订单物流</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/order"><i class="fa fa-truck"></i>
+                            订单及物流列表</a></li>
+                    </ul>
+                </li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-twitch"></i> <span>评论管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/comment"><i
+                                class="fa fa-slideshare"></i> 评论列表</a></li>
+                    </ul>
+                </li>
+                <!--<li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-user"></i> <span>文章管理</span> <i
+                            class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/article"><i class="fa fa-users"></i> 文章列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/article/create"><i class="fa fa-user-plus"></i> 添加文章</a></li>
+                    </ul>
+                </li>-->
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-windows"></i> <span>帮助中心管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/help"><i class="fa fa-newspaper-o"></i>
+                            帮助中心列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/help/create"><i class="fa  fa-pencil-square"></i>
+                            添加帮助内容</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/helpcate"><i class="fa  fa-object-group"></i> 帮助中心分类表</a>
+                        </li>
+                        <li><a href="http://www.xiangxi.com/admin/helpcate/create"><i class="fa fa-edit"></i> 添加帮助分类</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" treeview">
+                    <a href="http://www.xiangxi.com/admin/merchant#">
+                        <i class="fa fa-envelope"></i> <span>站内信管理</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="http://www.xiangxi.com/admin/messages"><i
+                                class="fa  fa-envelope-o"></i> 站内信列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/messages/create"><i class="fa fa-files-o"></i>
+                            添加站内信</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="min-height: 901px;">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                商户管理
+                <small>在这里进行商户的管理</small>
+                <button type="button" class="btn btn-success" style="margin-left:30px;" onclick="addStation()">添加站点</button>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="http://www.xiangxi.com/admin/merchant#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="http://www.xiangxi.com/admin/merchant#">商户站点列表</a></li>
+            </ol>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="alert" class="callout hide">
+                        <p name="content"></p>
+                    </div>
+
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">商户列表</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <form action="http://www.xiangxi.com/admin/merchant" method="get">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <!-- select -->
+                                        <div class="form-group">
+                                            <select name="pageSize" class="form-control">
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>50</option>
+                                                <option>100</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-flat">确定</button>
+                                    </span>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-5">
+                                        <div class="input-group input-group">
+                                            <input type="text" name="keyWord" value="" class="form-control">
+                                            <span class="input-group-btn">
+                                          <button class="btn btn-info btn-flat">搜索</button>
+                                        </span>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                            </form>
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>商户ID</th>
+                                    <th>站点名称</th>
+                                    <th>经度</th>
+                                    <th>维度</th>
+									<th>城市ID</th>
+                                    <th>详情</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                
+                                </tbody>
+                            </table>
+
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.3.0
+        </div>
+        <strong>Copyright © 2014-2015 <a href="http://almsaeedstudio.com/">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="http://www.xiangxi.com/admin/merchant#control-sidebar-theme-demo-options-tab"
+                                  data-toggle="tab"><i class="fa fa-wrench"></i></a></li>
+            <li><a href="http://www.xiangxi.com/admin/merchant#control-sidebar-home-tab" data-toggle="tab"><i
+                    class="fa fa-home"></i></a></li>
+            <li><a href="http://www.xiangxi.com/admin/merchant#control-sidebar-settings-tab" data-toggle="tab"><i
+                    class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul><!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul><!-- /.control-sidebar-menu -->
+
+            </div>
+            <div id="control-sidebar-theme-demo-options-tab" class="tab-pane active">
+                <div><h4 class="control-sidebar-heading">Layout Options</h4>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-layout="fixed"
+                                                                                             class="pull-right"> Fixed
+                        layout</label>
+                        <p>Activate the fixed layout. You can't use fixed and boxed layouts together</p></div>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-layout="layout-boxed"
+                                                                                             class="pull-right"> Boxed
+                        Layout</label>
+                        <p>Activate the boxed layout</p></div>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-layout="sidebar-collapse"
+                                                                                             class="pull-right"> Toggle
+                        Sidebar</label>
+                        <p>Toggle the left sidebar's state (open or collapse)</p></div>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-enable="expandOnHover"
+                                                                                             class="pull-right"> Sidebar
+                        Expand on Hover</label>
+                        <p>Let the sidebar mini expand on hover</p></div>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-controlsidebar="control-sidebar-open"
+                                                                                             class="pull-right"> Toggle
+                        Right Sidebar Slide</label>
+                        <p>Toggle between slide over content and push content effects</p></div>
+                    <div class="form-group"><label class="control-sidebar-subheading"><input type="checkbox"
+                                                                                             data-sidebarskin="toggle"
+                                                                                             class="pull-right"> Toggle
+                        Right Sidebar Skin</label>
+                        <p>Toggle between dark and light skins for the right sidebar</p></div>
+                    <h4 class="control-sidebar-heading">Skins</h4>
+                    <ul class="list-unstyled clearfix">
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-blue"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #367fa9;"></span><span
+                                    class="bg-light-blue"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Blue</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-black"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #fefefe;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 7px; background: #fefefe;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Black</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-purple"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-purple-active"></span><span class="bg-purple"
+                                                                             style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Purple</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-green"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-green-active"></span><span class="bg-green"
+                                                                            style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Green</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-red"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-red-active"></span><span class="bg-red"
+                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Red</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-yellow"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-yellow-active"></span><span class="bg-yellow"
+                                                                             style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin">Yellow</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-blue-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #367fa9;"></span><span
+                                    class="bg-light-blue"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px">Blue Light</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-black-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #fefefe;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 7px; background: #fefefe;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px">Black Light</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-purple-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-purple-active"></span><span class="bg-purple"
+                                                                             style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px">Purple Light</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-green-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-green-active"></span><span class="bg-green"
+                                                                            style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px">Green Light</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-red-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-red-active"></span><span class="bg-red"
+                                                                          style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px">Red Light</p></li>
+                        <li style="float:left; width: 33.33333%; padding: 5px;"><a href="javascript:void(0);"
+                                                                                   data-skin="skin-yellow-light"
+                                                                                   style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                                                                                   class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                       class="bg-yellow-active"></span><span class="bg-yellow"
+                                                                             style="display:block; width: 80%; float: left; height: 7px;"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"></span>
+                            </div>
+                        </a>
+                            <p class="text-center no-margin" style="font-size: 12px;">Yellow Light</p></li>
+                    </ul>
+                </div>
+            </div><!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked="">
+                        </label>
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Allow mail redirect
+                            <input type="checkbox" class="pull-right" checked="">
+                        </label>
+                        <p>
+                            Other sets of options are available
+                        </p>
+                    </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Expose author name in posts
+                            <input type="checkbox" class="pull-right" checked="">
+                        </label>
+                        <p>
+                            Allow the user to show his name in blog posts
+                        </p>
+                    </div><!-- /.form-group -->
+
+                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Show me as online
+                            <input type="checkbox" class="pull-right" checked="">
+                        </label>
+                    </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Turn off notifications
+                            <input type="checkbox" class="pull-right">
+                        </label>
+                    </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Delete chat history
+                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        </label>
+                    </div><!-- /.form-group -->
+                </form>
+            </div><!-- /.tab-pane -->
+        </div>
+    </aside><!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div><!-- ./wrapper -->
+
+<script src="./public/jquery-1.12.4.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="public/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.5 -->
+<script src="public/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="public/raphael-min.js"></script>
+<script src="public/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="public/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="public/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="public/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="public/jquery.knob.js"></script>
+<!-- daterangepicker -->
+<script src="public/moment.min.js"></script>
+<script src="public/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="public/bootstrap-datepicker.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="public/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="./public/auth_xx.js"></script>
+<script src="./public/app.min.js"></script>
+<!-- Slimscroll -->
+<script src="public/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="public/fastclick.min.js"></script>
+<!-- AdminLTE App -->
+<script src="public/app.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="public/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="public/demo.js"></script>
+
+<script type="text/javascript" src="public/javascript"></script>
+<script type="text/javascript" src="public/config.js"></script>
+<script>
+$.ajax({
+    url: "http://180.76.141.171/station/all",
+    type: "post",
+    dataType: "json",
+    async: "false",
+    success: function(data){
+        var count = data.data.stations.length;
+        alert(count);
+        var stations = data.data.stations;
+        var addresses = data.data.addresses;
+        var table = $('table')[0];
+        for (var i = 0 ; i < count ; i++){
+            var tr = $("<tr></tr>");
+            tr.appendTo(table);
+            $('<td>' + stations[i].id + '</td>').appendTo(tr);
+            $('<td>' + stations[i].name + '</td>').appendTo(tr);
+            $('<td>' + addresses[i].lng + '</td>').appendTo(tr);
+            $('<td>' + addresses[i].lat + '</td>').appendTo(tr);
+            $('<td>' + stations[i].region_id + '</td>').appendTo(tr);
+            $('<td>' + addresses[i].comment + "</td>").appendTo(tr);
+            $('<td><button class="btn btn-danger btn-xs stop" onclick="deleteStation(' + stations[i].id + ')">删除</button></td>').appendTo(tr);
+        }
+    }
+})
+</script>
+<script>
+    function deleteStation(id){
+        alert(id);
+        $.ajax({
+            url: "http://180.76.141.171/station/destroy",
+            type: "post",
+            data: "station_id=" + id,
+            dataType: "json",
+            async: "false",
+            success: function(data){
+                alert(data.msg);
+                if (data.status == 0){
+                    window.location.reload();
+                }
+            }
+        })
+    }
+</script>
+<script>
+    function addStation(){
+        window.location.href = superURL + "/product_category.html";
+    }
+</script>
+
+<div class="jvectormap-label"></div>
+</body>
+</html>
