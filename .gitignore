@@ -1,6 +1,7 @@
 #can ignore specific files
 .DS_Store
 .idea
+.idea/*
 
 # Use wildcards as well
 *~
