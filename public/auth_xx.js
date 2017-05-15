@@ -33,6 +33,10 @@ $(function () {
     if (title == "享洗小组-工厂站点添加") {
         merchantStationAdd();
     }
+
+    if (title == "享洗小组-品类管理") {
+        categoryList();
+    }
     var sidebar = '<section class="sidebar" style="height: auto;"><div class="user-panel"><div class="pull-left image"><img id="logo1"src="./public/1492093906700198.jpeg" class="logo img-circle" alt="User Image"></div><div class="pull-left info"><p class="user_local">享洗</p><a href=""><i class="fa fa-circle text-success"></i> Online</a></div></div><!-- search form --><form action="" method="get" class="sidebar-form"><div class="input-group"><input type="text" name="q" class="form-control" placeholder="Search..."><span class="input-group-btn"><button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button></span></div></form><!-- /.search form --><!-- sidebar menu: : style can be found in sidebar.less --><ul class="sidebar-menu"><li class="header">主功能区</li>' +
         '<li class="treeview"><a href=""><i class="fa fa-bars"></i><span> 品类</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./category_list.html"><i class="fa fa-reorder"></i> 所有品类</a></li></ul></li>' +
         '<li class="treeview"><a href=""><i class="fa fa-bars"></i><span> 商品管理</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./my_product_list.html"><i class="fa fa-reorder"></i> 我的商品</a></li><li><a href="./not_product_list.html"><i class="fa fa-plus"></i>添加商品</a></li></ul></li>' +
@@ -185,4 +189,39 @@ function merchantStationList() {
             }
         });
     });
+}
+
+
+function categoryList() {
+
+    $.ajax({
+        url: "http://180.76.141.171/category/all",
+        type: "post",
+        async: "false",
+        dataType: "json",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var categories = data.data.categories;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < categories.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td>' + categories[i].id + '</td>').appendTo(tr);
+                    $('<td>' + categories[i].name + '</td>').appendTo(tr);
+                    $('<td><img src="' + categories[i].logo + '" style="width:35px;height:35px;"/></td>').appendTo(tr);
+                    $('<td>' + categories[i].is_delete + '</td>').appendTo(tr);
+                    $('<td>' + categories[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + categories[i].updated_at + '</td>').appendTo(tr);
+                    $('<td><button class="btn btn-danger btn-xs stop" onclick="jump(' + categories[i].id + ')">商品</button></td>').appendTo(tr);
+                }
+            }
+        }
+    })
+
+    function jump(id){
+        window.location.href="good_list.html?category_id=" + id;
+    }
 }

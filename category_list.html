@@ -4,7 +4,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="znTlEIsix2DS0LyjKoCjMLEpZOrgDN2gNVaogKUW">
-    <title>商品列表-享洗小组</title>
+    <title id="title">享洗小组-品类管理</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -228,38 +228,7 @@
     <!--script type="text/javascript" src="http://www.xiangxi.com/mia/js/jquery-1.8.3.min.js"></script-->
     <script src="./public/auth_xx.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
-    <!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
-    <script>
-        $.ajax({
-            url: "http://180.76.141.171/category/all",
-            type: "post",
-            async: "false",
-            dataType: "json",
-            success: function(data){
-                if (data.status != 0){
-                    alert("error");
-                    return;
-                } else {
-                    var categories = data.data.categories;
-                    var tbody = $('tbody');
-                    for (var i = 0 ; i < categories.length ; i++){
-                        var tr = $('<tr></tr>');
-                        tr.appendTo(tbody);
-                        $('<td>' + categories[i].id + '</td>').appendTo(tr);
-                        $('<td>' + categories[i].name + '</td>').appendTo(tr);
-                        $('<td><img src="' + categories[i].logo + '" style="width:35px;height:35px;"/></td>').appendTo(tr);
-                        $('<td>' + categories[i].is_delete + '</td>').appendTo(tr);
-                        $('<td>' + categories[i].created_at + '</td>').appendTo(tr);
-                        $('<td>' + categories[i].updated_at + '</td>').appendTo(tr);
-                        $('<td><button class="btn btn-danger btn-xs stop" onclick="jump(' + categories[i].id + ')">商品</button></td>').appendTo(tr);
-                    }
-                }
-            }
-        })
-
-        function jump(id){
-            window.location.href="good_list.html?category_id=" + id;
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets">
+    <script type="text/javascript" src="./public/javascript"></script>
+    <script type="text/javascript">jQuery.noConflict(true);</script>
 </body></html>
