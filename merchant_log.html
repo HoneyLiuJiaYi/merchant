@@ -4,7 +4,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="znTlEIsix2DS0LyjKoCjMLEpZOrgDN2gNVaogKUW">
-    <title id="title">商品列表-享洗小组</title>
+    <title id="title">享洗小组-日志</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -129,7 +129,7 @@
 
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">商户收入列表</h3>
+                            <h3 class="box-title">工厂收入列表</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <form action="http://www.xiangxi.com/merchant/goods" method="get">
@@ -231,7 +231,7 @@
         var dataJson = {};
         dataJson.merchant_id = localStorage.m_id;
         $.ajax({
-            url: "http://180.76.141.171/merchant/logs",
+            url: hostMerchantUrl+"/merchant/logs",
             post: "post",
             data: dataJson,
             dataType: "json",

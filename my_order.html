@@ -229,7 +229,7 @@
         var dataJson = {};
         dataJson.merchant_id = 2;
         $.ajax({
-            url: "http://180.76.141.171/order/my",
+            url: hostMerchantUrl+"/order/my",
             post: "post",
             data: dataJson,
             dataType: "json",
@@ -262,7 +262,7 @@
         function catchOrder(ele){
             var order_id = $(ele).parent().parent().prev().find('td[name=orderId]').text();
             $.ajax({
-                url: "http://180.76.141.171/order/finsh",
+                url: hostMerchantUrl+"/order/finsh",
                 type: "post",
                 data: "order_id=" + order_id + "&merchant_id=" + localStorage.m_id,
                 dataType: "json",

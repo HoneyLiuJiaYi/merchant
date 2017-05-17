@@ -1,4 +1,5 @@
-
+var hostOperationUrl = "http://180.76.233.59:81";
+var hostMerchantUrl = "http://180.76.233.59:80";
 function logout() {
     localStorage.clear();
     window.location.href = "./login.html";
@@ -8,6 +9,7 @@ $(function () {
         alert('请登录！');
         window.location.href = "./login.html";
     }
+
     var m_id = localStorage.m_id;
     var m_nick = localStorage.nick
     var mail = localStorage.mail;
@@ -33,8 +35,37 @@ $(function () {
     if (title == "享洗小组-工厂站点添加") {
         merchantStationAdd();
     }
-
     if (title == "享洗小组-品类管理") {
+        categoryList();
+    }
+    if (title == "享洗小组-商品添加") {
+        addGood();
+    }
+    if (title == "享洗小组-统计") {
+        statisticLog();
+    }
+    if (title == "享洗小组-工厂驿站管理") {
+        merchantList();
+    }
+    if (title == "享洗小组-订单列表") {
+        orderList();
+    }
+    if (title == "享洗小组-工厂注册") {
+        login();
+    }
+    if (title == "享洗小组-其他商品列表") {
+        notProductList();
+    }
+    if (title == "享洗小组-我的商品列表") {
+        myProductList();
+    }
+    if (title == "享洗小组-日志") {
+        categoryList();
+    }
+    if (title == "享洗小组-我的订单列表") {
+        categoryList();
+    }
+    if (title == "享洗小组-首页") {
         categoryList();
     }
     var sidebar = '<section class="sidebar" style="height: auto;"><div class="user-panel"><div class="pull-left image"><img id="logo1"src="./public/1492093906700198.jpeg" class="logo img-circle" alt="User Image"></div><div class="pull-left info"><p class="user_local">享洗</p><a href=""><i class="fa fa-circle text-success"></i> Online</a></div></div><!-- search form --><form action="" method="get" class="sidebar-form"><div class="input-group"><input type="text" name="q" class="form-control" placeholder="Search..."><span class="input-group-btn"><button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button></span></div></form><!-- /.search form --><!-- sidebar menu: : style can be found in sidebar.less --><ul class="sidebar-menu"><li class="header">主功能区</li>' +
@@ -63,7 +94,7 @@ $(function () {
 
 function merchantStationAdd() {
     $.ajax({
-        url: 'http://180.76.141.171:81/merchant/unstation',
+        url: hostOperationUrl+'/merchant/unstation',
         type: 'post',
         dataType: 'json',
         data: {"merchant_id": localStorage.m_id},
@@ -89,7 +120,7 @@ function merchantStationAdd() {
 
                     var station_id = $(this).parent().siblings(":first").text();
                     $.ajax({
-                        url:'http://180.76.141.171:81/merchant/bind',
+                        url:hostOperationUrl+'/merchant/bind',
                         type:'post',
                         dataType: 'json',
                         data: {"merchant_id": localStorage.m_id, "station_id": station_id},
@@ -115,7 +146,7 @@ function merchantStationAdd() {
 }
 function merchantStationList() {
     $.ajax({
-        url: 'http://180.76.141.171:81/merchant/station',
+        url: hostOperationUrl+'/merchant/station',
         type: 'post',
         dataType: 'json',
         data: {"merchant_id": localStorage.m_id},
@@ -139,7 +170,7 @@ function merchantStationList() {
 
                     var station_id = $(this).parent().siblings(":first").text();
                     $.ajax({
-                        url:'http://180.76.141.171:81/merchant/unbind',
+                        url:hostOperationUrl+'/merchant/unbind',
                         type:'post',
                         dataType: 'json',
                         data: {"merchant_id": localStorage.m_id, "station_id": station_id},
@@ -199,7 +230,7 @@ function merchantStationList() {
 function categoryList() {
 
     $.ajax({
-        url: "http://180.76.141.171/category/all",
+        url: hostMerchantUrl+"/category/all",
         type: "post",
         async: "false",
         dataType: "json",
@@ -224,8 +255,8 @@ function categoryList() {
             }
         }
     })
+}
 
-    function jump(id){
-        window.location.href="good_list.html?category_id=" + id;
-    }
+function jump(id){
+    window.location.href="good_list.html?category_id=" + id;
 }

@@ -240,7 +240,7 @@
     var dataJson = {};
     dataJson.category_id = category_id;
     $.ajax({
-        url: "http://180.76.141.171/show/products",
+        url: hostMerchantUrl+"/show/products",
         post: "post",
         data: dataJson,
         dataType: "json",

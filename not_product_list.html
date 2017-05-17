@@ -231,7 +231,7 @@
     <!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
     <script>
         $.ajax({
-            url: "http://180.76.141.171/merchant/unproduct",
+            url: hostMerchantUrl+"/merchant/unproduct",
             type: "post",
             data: "merchant_id=" + 2,
             async: "false",
@@ -265,7 +265,7 @@
             dataJson.product_id = id;
             dataJson.price = price;
             $.ajax({
-                url: "http://180.76.141.171/merchant/product/bind",
+                url: hostMerchantUrl+"/merchant/product/bind",
                 type: "post",
                 data: dataJson,
                 dataType: "json",

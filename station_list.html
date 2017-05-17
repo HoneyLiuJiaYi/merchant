@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="znTlEIsix2DS0LyjKoCjMLEpZOrgDN2gNVaogKUW">
-    <title id="title">享洗小组-商户驿站管理</title>
+    <title id="title">享洗小组-工厂驿站管理</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -414,12 +414,12 @@
                 </li>
                 <li class=" treeview">
                     <a href="http://www.xiangxi.com/admin/merchant#">
-                        <i class="fa fa-group"></i> <span>商户管理</span> <i class="fa fa-angle-left pull-right"></i>
+                        <i class="fa fa-group"></i> <span>工厂管理</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="http://www.xiangxi.com/admin/merchant"><i class="fa fa-users"></i>
-                            商户列表</a></li>
-                        <li><a href="http://www.xiangxi.com/admin/merchant/create"><i class="fa fa-user-plus"></i> 添加商户</a>
+                            工厂列表</a></li>
+                        <li><a href="http://www.xiangxi.com/admin/merchant/create"><i class="fa fa-user-plus"></i> 添加工厂</a>
                         </li>
                         <li class="active"><a href="http://www.xiangxi.com/admin/goods"><i
                                 class="fa  fa-shopping-cart"></i> 商品列表</a></li>
@@ -510,13 +510,13 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                商户管理
-                <small>在这里进行商户的管理</small>
+                工厂管理
+                <small>在这里进行工厂的管理</small>
                 <button type="button" class="btn btn-success" style="margin-left:30px;" onclick="addStation()">添加站点</button>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="http://www.xiangxi.com/admin/merchant#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="http://www.xiangxi.com/admin/merchant#">商户站点列表</a></li>
+                <li><a href="http://www.xiangxi.com/admin/merchant#">工厂站点列表</a></li>
             </ol>
 
         </section>
@@ -531,7 +531,7 @@
 
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">商户列表</h3>
+                            <h3 class="box-title">工厂列表</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <form action="http://www.xiangxi.com/admin/merchant" method="get">
@@ -565,7 +565,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th>商户ID</th>
+                                    <th>工厂ID</th>
                                     <th>站点名称</th>
                                     <th>经度</th>
                                     <th>维度</th>
@@ -1013,7 +1013,7 @@
 <script type="text/javascript" src="public/config.js"></script>
 <script>
 $.ajax({
-    url: "http://180.76.141.171/station/all",
+    url: hostMerchantUrl+"/station/all",
     type: "post",
     dataType: "json",
     async: "false",
@@ -1041,7 +1041,7 @@ $.ajax({
     function deleteStation(id){
         alert(id);
         $.ajax({
-            url: "http://180.76.141.171/station/destroy",
+            url: hostMerchantUrl+"/station/destroy",
             type: "post",
             data: "station_id=" + id,
             dataType: "json",
