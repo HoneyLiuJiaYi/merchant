@@ -28,10 +28,10 @@ $(function () {
         sex = '男';
     }
     if (title == "享洗小组-工厂站点管理页") {
-        merchantStationList();
+        merchantStationList();//1
     }
     if (title == "享洗小组-骑手站点添加") {
-        riderStationAdd();
+        riderStationAdd();//1
     }
     if (title == "享洗小组-工厂站点添加") {
         merchantStationAdd();
@@ -156,23 +156,205 @@ function notProductList() {
 }
 
 function statisticLog() {
+    var url = hostMerchantUrl + '/merchant/discount';
+    var dataJson = {};
+    dataJson.merchant_id = localStorage.m_id;
+    $.ajax({
+        cache: false,
+        type: "GET",
+        url:url,
+        data: dataJson,
+        async: true,
+        error: function(request) {
+            alert("Connection error");
+        },
+        success: function(data) {
+            if (data.status=='0') {
+                var male = data.data.price;
+                var female = data.data.discount;
+                localStorage.male = male;
+                localStorage.female = female;
 
+            }else{
+                alert('获取信息失败！');
+            }
+        }
+    });
+
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+    var pieChart = new Chart(pieChartCanvas);
+    var PieData = [
+        {
+            value: localStorage.male,
+            color: "#f56954",
+            highlight: "#f56954",
+            label: "现金"
+        },
+        {
+            value: localStorage.female,
+            color: "#00a65a",
+            highlight: "#00a65a",
+            label: "折扣"
+        },
+
+    ];
+    var pieOptions = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke: true,
+        //String - The colour of each segment stroke
+        segmentStrokeColor: "#fff",
+        //Number - The width of each segment stroke
+        segmentStrokeWidth: 2,
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout: 50, // This is 0 for Pie charts
+        //Number - Amount of animation steps
+        animationSteps: 100,
+        //String - Animation easing effect
+        animationEasing: "easeOutBounce",
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate: true,
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale: false,
+        //Boolean - whether to make the chart responsive to window resizing
+        responsive: true,
+        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+        maintainAspectRatio: true,
+        //String - A legend template
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    };
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions);
+    // barChartOptions.datasetFill = false;
+    // barChart.Bar(barChartData, barChartOptions);
 }
 
 function stationList() {
-
+    $.ajax({
+        url: hostMerchantUrl+"/station/all",
+        type: "post",
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            var count = data.data.stations.length;
+            alert(count);
+            var stations = data.data.stations;
+            var addresses = data.data.addresses;
+            var table = $('table')[0];
+            for (var i = 0 ; i < count ; i++){
+                var tr = $("<tr></tr>");
+                tr.appendTo(table);
+                $('<td>' + stations[i].id + '</td>').appendTo(tr);
+                $('<td>' + stations[i].name + '</td>').appendTo(tr);
+                $('<td>' + addresses[i].lng + '</td>').appendTo(tr);
+                $('<td>' + addresses[i].lat + '</td>').appendTo(tr);
+                $('<td>' + stations[i].region_id + '</td>').appendTo(tr);
+                $('<td>' + addresses[i].comment + "</td>").appendTo(tr);
+                $('<td><button class="btn btn-danger btn-xs stop" onclick="deleteStation(' + stations[i].id + ')">删除</button></td>').appendTo(tr);
+            }
+        }
+    })
 }
 
 function orderList() {
+    var dataJson = {};
+    dataJson.merchant_id = 2;
+    $.ajax({
+        url: hostMerchantUrl+"/order/all",
+        post: "post",
+        data: dataJson,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var orders = data.data.orders;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < orders.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td name=orderId>' + orders[i].id + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].price + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].product_id + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].product_nums + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].updated_at + '</td>').appendTo(tr);
+                    $('<tr><td colspan="6" ><button style="width:90%;height:35px;margin-left:40px;" class="btn btn-danger btn-xs stop" onclick="catchOrder(this)">接单</button></td></tr>').appendTo(tbody);
+                }
+            }
+        }
+    })
 
 }
 
 function merchantLog() {
-
+    var dataJson = {};
+    dataJson.merchant_id = localStorage.m_id;
+    $.ajax({
+        url: hostMerchantUrl+"/merchant/logs",
+        post: "post",
+        data: dataJson,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var logs = data.data.logs;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < logs.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td>' + logs[i].id + '</td>').appendTo(tr);
+                    $('<td>' + logs[i].money + '</td>').appendTo(tr);
+                    $('<td>' + logs[i].user_id + '</td>').appendTo(tr);
+                    $('<td>' + logs[i].product_id + '</td>').appendTo(tr);
+                    $('<td>' + logs[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + logs[i].updated_at + '</td>').appendTo(tr);
+                    $('<td><button class="btn btn-danger btn-xs stop">详情</button></td>').appendTo(tr);
+                }
+            }
+        }
+    })
 }
 
 function myOrder() {
-
+    var dataJson = {};
+    dataJson.merchant_id = 2;
+    $.ajax({
+        url: hostMerchantUrl+"/order/my",
+        post: "post",
+        data: dataJson,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var orders = data.data.orders;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < orders.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td name=orderId>' + orders[i].id + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].price + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].product_id + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].product_nums + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + orders[i].updated_at + '</td>').appendTo(tr);
+                    $('<tr><td colspan="6" ><button style="width:90%;height:35px;margin-left:40px;" class="btn btn-danger btn-xs stop" onclick="catchOrder(this)">洗完送还</button></td></tr>').appendTo(tbody);
+                }
+            }
+        }
+    })
 }
 function myProductList() {
     $.ajax({
@@ -432,3 +614,69 @@ function getQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return r[2]; return null;
 }
+
+function catchOrder(ele){
+    var order_id = $(ele).parent().parent().prev().find('td[name=orderId]').text();
+    $.ajax({
+        url: hostMerchantUrl+"/order/finsh",
+        type: "post",
+        data: "order_id=" + order_id + "&merchant_id=" + localStorage.m_id,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status == 0){
+                alert('送还成功');
+                window.location.reload();
+            } else {
+                alert(data.msg);
+            }
+        }
+    })
+}
+
+function catchOrder1(ele){
+    var order_id = $(ele).parent().parent().prev().find('td[name=orderId]').text();
+    $.ajax({
+        url: hostMerchantUrl+"/order/catch",
+        type: "post",
+        data: "order_id=" + order_id + "&merchant_id=" + localStorage.m_id,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status == 0){
+                alert('接单成功');
+                window.location.reload();
+            } else {
+                alert(data.msg);
+            }
+        }
+    })
+}
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return r[2]; return null;
+}
+
+function deleteStation(id){
+    alert(id);
+    $.ajax({
+        url: hostMerchantUrl+"/station/destroy",
+        type: "post",
+        data: "station_id=" + id,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            alert(data.msg);
+            if (data.status == 0){
+                window.location.reload();
+            }
+        }
+    })
+}
+
+function addStation(){
+    window.location.href = superURL + "/product_category.html";
+}
+

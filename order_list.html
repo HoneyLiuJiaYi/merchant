@@ -225,64 +225,6 @@
     <script src="./public/demo.js"></script>
     <!--script type="text/javascript" src="http://www.xiangxi.com/mia/js/jquery-1.8.3.min.js"></script-->
     <script src="./public/auth_xx.js"></script>
-    <script>
-        function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) return r[2]; return null;
-        }
-    </script>
-    <script>
-        var dataJson = {};
-        dataJson.merchant_id = 2;
-        $.ajax({
-            url: hostMerchantUrl+"/order/all",
-            post: "post",
-            data: dataJson,
-            dataType: "json",
-            async: "false",
-            success: function(data){
-                if (data.status != 0){
-                    alert("error");
-                    return;
-                } else {
-                    var orders = data.data.orders;
-                    var tbody = $('tbody');
-                    for (var i = 0 ; i < orders.length ; i++){
-                        var tr = $('<tr></tr>');
-                        tr.appendTo(tbody);
-                        $('<td name=orderId>' + orders[i].id + '</td>').appendTo(tr);
-                        $('<td>' + orders[i].price + '</td>').appendTo(tr);
-                        $('<td>' + orders[i].product_id + '</td>').appendTo(tr);
-                        $('<td>' + orders[i].product_nums + '</td>').appendTo(tr);
-                        $('<td>' + orders[i].created_at + '</td>').appendTo(tr);
-                        $('<td>' + orders[i].updated_at + '</td>').appendTo(tr);
-                        $('<tr><td colspan="6" ><button style="width:90%;height:35px;margin-left:40px;" class="btn btn-danger btn-xs stop" onclick="catchOrder(this)">接单</button></td></tr>').appendTo(tbody);
-                    }
-                }
-            }
-        })
-    </script>
     <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
     <script type="text/javascript">jQuery.noConflict(true);</script>
-    <script>
-        function catchOrder(ele){
-            var order_id = $(ele).parent().parent().prev().find('td[name=orderId]').text();
-            $.ajax({
-                url: hostMerchantUrl+"/order/catch",
-                type: "post",
-                data: "order_id=" + order_id + "&merchant_id=" + localStorage.m_id,
-                dataType: "json",
-                async: "false",
-                success: function(data){
-                    if (data.status == 0){
-                        alert('接单成功');
-                        window.location.reload();
-                    } else {
-                        alert(data.msg);
-                    }
-                }
-            })
-        }
-    </script>
 </body></html>

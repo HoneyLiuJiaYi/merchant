@@ -1011,55 +1011,6 @@
 
 <script type="text/javascript" src="public/javascript"></script>
 <script type="text/javascript" src="public/config.js"></script>
-<script>
-$.ajax({
-    url: hostMerchantUrl+"/station/all",
-    type: "post",
-    dataType: "json",
-    async: "false",
-    success: function(data){
-        var count = data.data.stations.length;
-        alert(count);
-        var stations = data.data.stations;
-        var addresses = data.data.addresses;
-        var table = $('table')[0];
-        for (var i = 0 ; i < count ; i++){
-            var tr = $("<tr></tr>");
-            tr.appendTo(table);
-            $('<td>' + stations[i].id + '</td>').appendTo(tr);
-            $('<td>' + stations[i].name + '</td>').appendTo(tr);
-            $('<td>' + addresses[i].lng + '</td>').appendTo(tr);
-            $('<td>' + addresses[i].lat + '</td>').appendTo(tr);
-            $('<td>' + stations[i].region_id + '</td>').appendTo(tr);
-            $('<td>' + addresses[i].comment + "</td>").appendTo(tr);
-            $('<td><button class="btn btn-danger btn-xs stop" onclick="deleteStation(' + stations[i].id + ')">删除</button></td>').appendTo(tr);
-        }
-    }
-})
-</script>
-<script>
-    function deleteStation(id){
-        alert(id);
-        $.ajax({
-            url: hostMerchantUrl+"/station/destroy",
-            type: "post",
-            data: "station_id=" + id,
-            dataType: "json",
-            async: "false",
-            success: function(data){
-                alert(data.msg);
-                if (data.status == 0){
-                    window.location.reload();
-                }
-            }
-        })
-    }
-</script>
-<script>
-    function addStation(){
-        window.location.href = superURL + "/product_category.html";
-    }
-</script>
 
 <div class="jvectormap-label"></div>
 </body>
