@@ -32,7 +32,7 @@
             margin: 2% auto;
         }
     </style>
-</head>
+<script src="./public/config.js"></script></head>
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
@@ -132,7 +132,7 @@
 <script src="./public/admin/plugins/iCheck/icheck.min.js"></script>
 <script>
     $('#submitButton').click(function(){
-        var url = 'http://180.76.141.171/send/mail';
+        var url = hostMerchantUrl + '/send/mail';
         $.ajax({
             cache: true,
             type: "POST",
@@ -174,7 +174,7 @@
     });
     $(document).on('ready', function() {
         var config = {
-            uploadUrl: 'http://180.76.141.171/send/mail', // you must set a valid URL here else you will get an error
+            uploadUrl: hostMerchantUrl + '/send/mail', // you must set a valid URL here else you will get an error
             allowedFileExtensions : ['jpg', 'png','gif'],
             maxFileSize: 10240,
             maxFilePreviewSize: 10240,

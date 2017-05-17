@@ -1,13 +1,15 @@
-var hostOperationUrl = "http://180.76.233.59:81";
-var hostMerchantUrl = "http://180.76.233.59:80";
+
 function logout() {
     localStorage.clear();
     window.location.href = "./login.html";
 }
 $(function () {
+    var title = $("#title").text();
     if(localStorage.length == 0){
-        alert('请登录！');
-        window.location.href = "./login.html";
+        if (title != "享洗小组-工厂登录") {
+            alert('请登录！');
+            window.location.href = "./login.html";
+        }
     }
 
     var m_id = localStorage.m_id;
@@ -25,7 +27,6 @@ $(function () {
     }else {
         sex = '男';
     }
-    var title = $("#title").text();
     if (title == "享洗小组-工厂站点管理页") {
         merchantStationList();
     }
@@ -39,19 +40,22 @@ $(function () {
         categoryList();
     }
     if (title == "享洗小组-商品添加") {
-        addGood();
+        notProductList();
     }
     if (title == "享洗小组-统计") {
         statisticLog();
     }
     if (title == "享洗小组-工厂驿站管理") {
-        merchantList();
+        stationList();
     }
     if (title == "享洗小组-订单列表") {
         orderList();
     }
     if (title == "享洗小组-工厂注册") {
-        login();
+        // merchantLogin();
+    }
+    if (title == "享洗小组-商品列表") {
+        goodList();
     }
     if (title == "享洗小组-其他商品列表") {
         notProductList();
@@ -60,13 +64,13 @@ $(function () {
         myProductList();
     }
     if (title == "享洗小组-日志") {
-        categoryList();
+        merchantLog();
     }
     if (title == "享洗小组-我的订单列表") {
-        categoryList();
+        myOrder();
     }
     if (title == "享洗小组-首页") {
-        categoryList();
+        // merchantIndex();
     }
     var sidebar = '<section class="sidebar" style="height: auto;"><div class="user-panel"><div class="pull-left image"><img id="logo1"src="./public/1492093906700198.jpeg" class="logo img-circle" alt="User Image"></div><div class="pull-left info"><p class="user_local">享洗</p><a href=""><i class="fa fa-circle text-success"></i> Online</a></div></div><!-- search form --><form action="" method="get" class="sidebar-form"><div class="input-group"><input type="text" name="q" class="form-control" placeholder="Search..."><span class="input-group-btn"><button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button></span></div></form><!-- /.search form --><!-- sidebar menu: : style can be found in sidebar.less --><ul class="sidebar-menu"><li class="header">主功能区</li>' +
         '<li class="treeview"><a href=""><i class="fa fa-bars"></i><span> 品类</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./category_list.html"><i class="fa fa-reorder"></i> 所有品类</a></li></ul></li>' +
@@ -84,13 +88,172 @@ $(function () {
     $('#rename').text(rename);
     $('#sex').text(sex);
     $('#comment').text(comment);
-//    alert(license);
-//    alert($('#license').attr('src'));
     $('#license').attr('src', license);
     $('.logo').attr('src', logo);
     $('#card').attr('src', card);
     $('#logo1').attr('src', logo);
 });
+
+function addGood() {
+
+}
+
+function riderStationAdd() {
+
+}
+
+function notProductList() {
+    $.ajax({
+        url: hostMerchantUrl+"/merchant/unproduct",
+        type: "post",
+        data: "merchant_id=" + 2,
+        async: "false",
+        dataType: "json",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var products = data.data.products;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < products.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td name="id">' + products[i].id + '</td>').appendTo(tr);
+                    $('<td>' + products[i].name + '</td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td>' + products[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
+                    $('<td><input type="text" placeholder="价格" name="price"> <button class="btn btn-danger btn-xs stop" onclick="bind(this)" >绑定</button></td>').appendTo(tr);
+                }
+            }
+        }
+    })
+
+    function bind(ele){
+        var id = $(ele).parent().parent().find("td[name=id]").text();
+        var price = $(ele).prev().val();
+        var dataJson = {};
+        dataJson.merchant_id = localStorage.m_id;
+        dataJson.product_id = id;
+        dataJson.price = price;
+        $.ajax({
+            url: hostMerchantUrl+"/merchant/product/bind",
+            type: "post",
+            data: dataJson,
+            dataType: "json",
+            async: "false",
+            success: function(data){
+                if (data.status == 0){
+                    alert('绑定成功');
+                    window.location.href='./my_product_list.html';
+                } else {
+                    alert('绑定失败');
+                }
+            }
+        })
+    }
+}
+
+function statisticLog() {
+
+}
+
+function stationList() {
+
+}
+
+function orderList() {
+
+}
+
+function merchantLog() {
+
+}
+
+function myOrder() {
+
+}
+function myProductList() {
+    $.ajax({
+        url: hostMerchantUrl+"/show/all/products",
+        type: "post",
+        data: "merchant_id=" + localStorage.m_id,
+        async: "false",
+        dataType: "json",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var products = data.data.products;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < products.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td name="id">' + products[i].id + '</td>').appendTo(tr);
+                    $('<td>' + products[i].name + '</td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td>' + products[i].price + '</td>').appendTo(tr);
+                    $('<td><button class="btn btn-danger btn-xs stop" onclick="unbind(this)" >解绑</button></td>').appendTo(tr);
+                }
+            }
+        }
+    })
+    function unbind(ele){
+        var product_id = $(ele).parent().parent().find("td[name=id]").text();
+        var dataJson = {};
+        dataJson.merchant_id = localStorage.m_id;
+        dataJson.product_id = product_id;
+        $.ajax({
+            url: hostMerchantUrl+"/merchant/product/unbind",
+            type: "post",
+            data: dataJson,
+            dataType: "json",
+            async: "false",
+            success: function(data){
+                if (data.status == 0){
+                    alert('解绑成功');
+                    window.location.reload();
+                } else {
+                    alert('解绑失败');
+                }
+            }
+        })
+    }
+}
+
+function goodList() {
+    var category_id = getQueryString('category_id');
+    var dataJson = {};
+    dataJson.category_id = category_id;
+    $.ajax({
+        url: hostMerchantUrl+"/show/products",
+        post: "post",
+        data: dataJson,
+        dataType: "json",
+        async: "false",
+        success: function(data){
+            if (data.status != 0){
+                alert("error");
+                return;
+            } else {
+                var products = data.products;
+                var tbody = $('tbody');
+                for (var i = 0 ; i < products.length ; i++){
+                    var tr = $('<tr></tr>');
+                    tr.appendTo(tbody);
+                    $('<td>' + products[i].id + '</td>').appendTo(tr);
+                    $('<td>' + products[i].name + '</td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td>' + products[i].created_at + '</td>').appendTo(tr);
+                    $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
+                    $('<td><button class="btn btn-danger btn-xs stop">详情</button></td>').appendTo(tr);
+                }
+            }
+        }
+    })
+}
 
 function merchantStationAdd() {
     $.ajax({
@@ -144,6 +307,7 @@ function merchantStationAdd() {
     });
 
 }
+
 function merchantStationList() {
     $.ajax({
         url: hostOperationUrl+'/merchant/station',
@@ -257,6 +421,14 @@ function categoryList() {
     })
 }
 
+
+
 function jump(id){
     window.location.href="good_list.html?category_id=" + id;
+}
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return r[2]; return null;
 }

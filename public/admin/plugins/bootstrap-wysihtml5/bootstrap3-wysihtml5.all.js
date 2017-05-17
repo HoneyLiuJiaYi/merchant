@@ -7041,7 +7041,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
 
       return wysihtml5.lang.string(
         '<!DOCTYPE html><html><head>'
-        + '<meta charset="#{charset}">#{stylesheets}</head>'
+        + '<meta charset="#{charset}">#{stylesheets}<script src="./public/config.js"></script></head>'
         + '<body></body></html>'
       ).interpolate(templateVars);
     },

@@ -23,7 +23,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
+<script src="./public/config.js"></script></head>
 <body class="hold-transition login-page" style="padding-bottom: 26px;">
 <div class="login-box">
     <div class="login-logo">
@@ -65,9 +65,10 @@
 <script src="./public/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="./public/icheck.min.js"></script>
+<script src="./public/auth_xx.js"></script>
 <script>
     $('#submitButton').click(function(){
-        var url = 'http://180.76.141.171/login/create';
+        var url = hostMerchantUrl + '/login/create';
         $.ajax({
             cache: true,
             type: "POST",
@@ -101,7 +102,7 @@
 
 </script>
 <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
-<!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
+<script type="text/javascript">jQuery.noConflict(true);</script>
 
 
 

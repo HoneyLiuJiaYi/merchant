@@ -37,7 +37,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><script src="./public/config.js"></script></head>
 <body class="skin-blue sidebar-mini" style="padding-bottom: 30px;">
 <div class="wrapper">
 
@@ -227,53 +227,5 @@
     <script src="./public/auth_xx.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
-    <!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
-    <script>
-        $.ajax({
-            url: hostMerchantUrl+"/show/all/products",
-            type: "post",
-            data: "merchant_id=" + localStorage.m_id,
-            async: "false",
-            dataType: "json",
-            success: function(data){
-                if (data.status != 0){
-                    alert("error");
-                    return;
-                } else {
-                    var products = data.data.products;
-                    var tbody = $('tbody');
-                    for (var i = 0 ; i < products.length ; i++){
-                        var tr = $('<tr></tr>');
-                        tr.appendTo(tbody);
-                        $('<td name="id">' + products[i].id + '</td>').appendTo(tr);
-                        $('<td>' + products[i].name + '</td>').appendTo(tr);
-                        $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
-                        $('<td>' + products[i].price + '</td>').appendTo(tr);
-                        $('<td><button class="btn btn-danger btn-xs stop" onclick="unbind(this)" >解绑</button></td>').appendTo(tr);
-                    }
-                }
-            }
-        })
-        function unbind(ele){
-           var product_id = $(ele).parent().parent().find("td[name=id]").text();
-            var dataJson = {};
-            dataJson.merchant_id = localStorage.m_id;
-            dataJson.product_id = product_id;
-            $.ajax({
-                url: hostMerchantUrl+"/merchant/product/unbind",
-                type: "post",
-                data: dataJson,
-                dataType: "json",
-                async: "false",
-                success: function(data){
-                    if (data.status == 0){
-                        alert('解绑成功');
-                        window.location.reload();
-                    } else {
-                        alert('解绑失败');
-                    }
-                }
-            })
-        }
-    </script>
+    <script type="text/javascript">jQuery.noConflict(true);</script>
 </body></html>

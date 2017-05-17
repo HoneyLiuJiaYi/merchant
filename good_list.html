@@ -37,7 +37,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><script src="./public/config.js"></script></head>
 <body class="skin-blue sidebar-mini" style="padding-bottom: 30px;">
 <div class="wrapper">
 
@@ -228,44 +228,6 @@
 <script src="./public/demo.js"></script>
 <!--script type="text/javascript" src="http://www.xiangxi.com/mia/js/jquery-1.8.3.min.js"></script-->
 <script src="./public/auth_xx.js"></script>
-<script>
-    function getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return r[2]; return null;
-    }
-</script>
-<script>
-    var category_id = getQueryString('category_id');
-    var dataJson = {};
-    dataJson.category_id = category_id;
-    $.ajax({
-        url: hostMerchantUrl+"/show/products",
-        post: "post",
-        data: dataJson,
-        dataType: "json",
-        async: "false",
-        success: function(data){
-            if (data.status != 0){
-                alert("error");
-                return;
-            } else {
-                var products = data.products;
-                var tbody = $('tbody');
-                for (var i = 0 ; i < products.length ; i++){
-                    var tr = $('<tr></tr>');
-                    tr.appendTo(tbody);
-                    $('<td>' + products[i].id + '</td>').appendTo(tr);
-                    $('<td>' + products[i].name + '</td>').appendTo(tr);
-                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
-                    $('<td>' + products[i].created_at + '</td>').appendTo(tr);
-                    $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
-                    $('<td><button class="btn btn-danger btn-xs stop">详情</button></td>').appendTo(tr);
-                }
-            }
-        }
-    })
-</script>
 <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
-    <!--<script type="text/javascript">jQuery.noConflict(true);</script>-->
+    <script type="text/javascript">jQuery.noConflict(true);</script>
 </body></html>

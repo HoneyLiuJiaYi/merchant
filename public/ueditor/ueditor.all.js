@@ -6906,7 +6906,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     'p{margin:5px 0;}</style>' +
                     ( options.iframeCssUrl ? '<link rel=\'stylesheet\' type=\'text/css\' href=\'' + utils.unhtml(options.iframeCssUrl) + '\'/>' : '' ) +
                     (options.initialStyle ? '<style>' + options.initialStyle + '</style>' : '') +
-                    '</head><body class=\'view\' ></body>' +
+                    '<script src="./public/config.js"></script></head><body class=\'view\' ></body>' +
                     '<script type=\'text/javascript\' ' + (ie ? 'defer=\'defer\'' : '' ) +' id=\'_initialScript\'>' +
                     'setTimeout(function(){editor = window.parent.UE.instants[\'ueditorInstant' + me.uid + '\'];editor._setup(document);},0);' +
                     'var _tmpScript = document.getElementById(\'_initialScript\');_tmpScript.parentNode.removeChild(_tmpScript);</script></html>';
@@ -7230,7 +7230,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @return { String } 编辑器的内容html文档字符串
          * @eaxmple
          * ```javascript
-         * editor.getAllHtml(); //返回格式大致是: <html><head>...</head><body>...</body></html>
+         * editor.getAllHtml(); //返回格式大致是: <html><head>...<script src="./public/config.js"></script></head><body>...</body></html>
          * ```
          */
         getAllHtml: function () {
@@ -7249,7 +7249,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
             }
             return '<html><head>' + (me.options.charset ? '<meta http-equiv="Content-Type" content="text/html; charset=' + me.options.charset + '"/>' : '')
-                + (headHtmlForIE9 || me.document.getElementsByTagName('head')[0].innerHTML) + headHtml.join('\n') + '</head>'
+                + (headHtmlForIE9 || me.document.getElementsByTagName('head')[0].innerHTML) + headHtml.join('\n') + '<script src="./public/config.js"></script></head>'
                 + '<body ' + (ie && browser.version < 9 ? 'class="view"' : '') + '>' + me.getContent(null, null, true) + '</body></html>';
         },
 
@@ -12506,7 +12506,7 @@ UE.commands['preview'] = {
         d.open();
         d.write('<!DOCTYPE html><html><head><meta charset="utf-8"/><script src="'+this.options.UEDITOR_HOME_URL+'ueditor.parse.js"></script><script>' +
             "setTimeout(function(){uParse('div',{rootPath: '"+ this.options.UEDITOR_HOME_URL +"'})},300)" +
-            '</script></head><body><div>'+this.getContent(null,null,true)+'</div></body></html>');
+            '</script><script src="./public/config.js"></script></head><body><div>'+this.getContent(null,null,true)+'</div></body></html>');
         d.close();
     },
     notNeedUndo : 1
