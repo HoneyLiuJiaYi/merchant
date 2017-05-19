@@ -9,6 +9,8 @@ $(function () {
         if (title != "享洗小组-工厂登录") {
             alert('请登录！');
             window.location.href = "./login.html";
+        } else {
+            merchantLogin();
         }
     }
 
@@ -102,11 +104,46 @@ function riderStationAdd() {
 
 }
 
+function merchantLogin(){
+    $('#submitButton').click(function(){
+        var url = hostMerchantUrl + '/login/create';
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url:url,
+            data:$('#login_form').serialize(),// 你的formid
+            async: false,
+            error: function(request) {
+                alert("Connection error");
+            },
+            success: function(data) {
+                if (data.status=='0') {
+                    alert('登录成功');
+                    localStorage.m_id = data.data.merchant.id;
+                    localStorage.nick = data.data.merchant.nick;
+                    localStorage.mail = data.data.merchant.mail;
+                    localStorage.mobile = data.data.merchant.mobile;
+                    localStorage.rename = data.data.merchant.rename;
+                    localStorage.license = data.data.merchant.license;
+                    localStorage.comment = data.data.merchant.comment;
+                    localStorage.logo = data.data.merchant.logo;
+                    localStorage.card = data.data.merchant.card;
+                    localStorage.sex = data.data.merchant.sex;
+                    window.location.href = "./index.html";
+                }else{
+                    alert('用户名或密码错误！');
+                }
+            }
+        });
+        return false;
+    });
+}
+
 function notProductList() {
     $.ajax({
         url: hostMerchantUrl+"/merchant/unproduct",
         type: "post",
-        data: "merchant_id=" + 2,
+        data: "merchant_id=" + localStorage.m_id,
         async: "false",
         dataType: "json",
         success: function(data){
@@ -124,35 +161,36 @@ function notProductList() {
                     $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
                     $('<td>' + products[i].created_at + '</td>').appendTo(tr);
                     $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
-                    $('<td><input type="text" placeholder="价格" name="price"> <button class="btn btn-danger btn-xs stop" onclick="bind(this)" >绑定</button></td>').appendTo(tr);
+                    $('<td><input type="text" placeholder="价格" name="price"> <button class="btn btn-danger btn-xs stop" name="bind" >绑定</button></td>').appendTo(tr);
                 }
+                $('button[name=bind]').click(function(){
+                    var id = $(this).parent().parent().find("td[name=id]").text();
+                    var price = $(this).prev().val();
+                    var dataJson = {};
+                    dataJson.merchant_id = localStorage.m_id;
+                    dataJson.product_id = id;
+                    dataJson.price = price;
+                    $.ajax({
+                        url: hostMerchantUrl+"/merchant/product/bind",
+                        type: "post",
+                        data: dataJson,
+                        dataType: "json",
+                        async: "false",
+                        success: function(data){
+                            if (data.status == 0){
+                                alert('绑定成功');
+                                window.location.href='./my_product_list.html';
+                            } else {
+                                alert('绑定失败');
+                            }
+                        }
+                    });
+                });
             }
+        },error: function(){
+                alert("fuck");
         }
-    })
-
-    function bind(ele){
-        var id = $(ele).parent().parent().find("td[name=id]").text();
-        var price = $(ele).prev().val();
-        var dataJson = {};
-        dataJson.merchant_id = localStorage.m_id;
-        dataJson.product_id = id;
-        dataJson.price = price;
-        $.ajax({
-            url: hostMerchantUrl+"/merchant/product/bind",
-            type: "post",
-            data: dataJson,
-            dataType: "json",
-            async: "false",
-            success: function(data){
-                if (data.status == 0){
-                    alert('绑定成功');
-                    window.location.href='./my_product_list.html';
-                } else {
-                    alert('绑定失败');
-                }
-            }
-        })
-    }
+    });
 }
 
 function statisticLog() {
@@ -160,7 +198,7 @@ function statisticLog() {
     var dataJson = {};
     dataJson.merchant_id = localStorage.m_id;
     $.ajax({
-        cache: false,
+        cache: true,
         type: "GET",
         url:url,
         data: dataJson,
@@ -377,32 +415,34 @@ function myProductList() {
                     $('<td>' + products[i].name + '</td>').appendTo(tr);
                     $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
                     $('<td>' + products[i].price + '</td>').appendTo(tr);
-                    $('<td><button class="btn btn-danger btn-xs stop" onclick="unbind(this)" >解绑</button></td>').appendTo(tr);
+                    $('<td><button class="btn btn-danger btn-xs stop" name="unbind" >解绑</button></td>').appendTo(tr);
                 }
+                $('button[name=unbind]').click(function(){
+                    var product_id = $(this).parent().parent().find("td[name=id]").text();
+                    var dataJson = {};
+                    dataJson.merchant_id = localStorage.m_id;
+                    dataJson.product_id = product_id;
+                    $.ajax({
+                        url: hostMerchantUrl+"/merchant/product/unbind",
+                        type: "post",
+                        data: dataJson,
+                        dataType: "json",
+                        async: "false",
+                        success: function(data){
+                            if (data.status == 0){
+                                alert('解绑成功');
+                                window.location.reload();
+                            } else {
+                                alert('解绑失败');
+                            }
+                        }
+                    });
+                });
             }
         }
     })
-    function unbind(ele){
-        var product_id = $(ele).parent().parent().find("td[name=id]").text();
-        var dataJson = {};
-        dataJson.merchant_id = localStorage.m_id;
-        dataJson.product_id = product_id;
-        $.ajax({
-            url: hostMerchantUrl+"/merchant/product/unbind",
-            type: "post",
-            data: dataJson,
-            dataType: "json",
-            async: "false",
-            success: function(data){
-                if (data.status == 0){
-                    alert('解绑成功');
-                    window.location.reload();
-                } else {
-                    alert('解绑失败');
-                }
-            }
-        })
-    }
+
+
 }
 
 function goodList() {
@@ -450,19 +490,15 @@ function merchantStationAdd() {
             for (var i = 0; i < product_list.length; i++) {
                 var tr = $("<tr></tr>");
                 tr.appendTo(table);
-
                 //添加id
                 var td_product_id = $("<td>" + product_list[i].id + "</td>");
                 td_product_id.appendTo(tr);
                 //nick
                 $("<td>" + product_list[i].name + "</td>").appendTo(tr);
                 $('<td><a class="btn btn-danger btn-xs bind">绑定</a>').appendTo(tr);
-
             }
-
             $(".bind").each(function(event){
                 $(this).click(function(event){
-
                     var station_id = $(this).parent().siblings(":first").text();
                     $.ajax({
                         url:hostOperationUrl+'/merchant/bind',
@@ -481,13 +517,11 @@ function merchantStationAdd() {
                     });
                 });
             });
-
         },
         error: function () {
             alert("error");
         }
     });
-
 }
 
 function merchantStationList() {
@@ -510,7 +544,6 @@ function merchantStationList() {
                 $("<td>" + product_list[i].name + "</td>").appendTo(tr);
                 $('<td><a class="btn btn-danger btn-xs delete">解绑</a>').appendTo(tr);
             }
-
             $(".delete").each(function(event){
                 $(this).click(function(event){
 
@@ -532,16 +565,11 @@ function merchantStationList() {
                     });
                 });
             });
-
-
-
         },
         error: function () {
             alert("error");
         }
     });
-
-
     $('a[action="delete"]').on('click', function () {
         var id = $(this).attr('data');
         var me = $(this).parent().parent();
@@ -572,9 +600,7 @@ function merchantStationList() {
     });
 }
 
-
 function categoryList() {
-
     $.ajax({
         url: hostMerchantUrl+"/category/all",
         type: "post",
