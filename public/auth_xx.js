@@ -13,7 +13,6 @@ $(function () {
             merchantLogin();
         }
     }
-
     var m_id = localStorage.m_id;
     var m_nick = localStorage.nick
     var mail = localStorage.mail;
@@ -74,6 +73,9 @@ $(function () {
     if (title == "享洗小组-首页") {
         // merchantIndex();
     }
+    if (title == "享洗小组-商户结算管理") {
+        settlement();
+    }
     var sidebar = '<section class="sidebar" style="height: auto;"><div class="user-panel"><div class="pull-left image"><img id="logo1"src="./public/1492093906700198.jpeg" class="logo img-circle" alt="User Image"></div><div class="pull-left info"><p class="user_local">享洗</p><a href=""><i class="fa fa-circle text-success"></i> Online</a></div></div><!-- search form --><form action="" method="get" class="sidebar-form"><div class="input-group"><input type="text" name="q" class="form-control" placeholder="Search..."><span class="input-group-btn"><button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button></span></div></form><!-- /.search form --><!-- sidebar menu: : style can be found in sidebar.less --><ul class="sidebar-menu"><li class="header">主功能区</li>' +
         '<li class="treeview"><a href=""><i class="fa fa-bars"></i><span> 品类</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./category_list.html"><i class="fa fa-reorder"></i> 所有品类</a></li></ul></li>' +
         '<li class="treeview"><a href=""><i class="fa fa-bars"></i><span> 商品管理</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./my_product_list.html"><i class="fa fa-reorder"></i> 我的商品</a></li><li><a href="./not_product_list.html"><i class="fa fa-plus"></i>添加商品</a></li></ul></li>' +
@@ -81,7 +83,10 @@ $(function () {
         '<ul class="treeview-menu"><li class="active"><a href="./order_list.html"><i class="fa fa-reorder"></i> 订单列表</a></li><li class="active"><a href="./my_order.html"><i class="fa fa-reorder"></i> 我的订单</a></li><li class="active"><a href="./merchant_log.html"><i class="fa fa-reorder"></i> 流水管理</a></li></ul></li>' +
         '<li class="treeview"><a href=""><i class="fa fa-truck"></i> <span> 物流管理</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href=""><i class="fa fa-reorder"></i> 物流列表</a></li></ul></li><li class="treeview"><a href=""><i class="fa fa-user"></i> <span> 评价管理</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href=""><i class="fa fa-users"></i> 评价列表</a></li></ul></li>' +
         '<li class="treeview"><a href=""><i class="fa fa-user"></i> <span> 退货管理</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href=""><i class="fa fa-users"></i> 退货列表</a></li></ul></li>' +
-        '<li class="treeview"><a href=""><i class="fa fa-user"></i> <span> 统计</span> <i class="fa fa-angle-left pull-right"></i></a><ul class="treeview-menu"><li class="active"><a href="./statistic_log.html"><i class="fa fa-users"></i> 收入统计</a></li></ul></li>' +
+        '<li class="treeview"><a href=""><i class="fa fa-user"></i> <span> 统计</span> <i class="fa fa-angle-left pull-right"></i></a>' +
+        '<ul class="treeview-menu"><li class="active"><a href="./statistic_log.html"><i class="fa fa-users"></i> 收入统计</a></li></ul>' +
+        '<ul class="treeview-menu"><li class="active"><a href="./settlement.html"><i class="fa fa-users"></i> 结算统计</a></li></ul>' +
+        '</li>' +
         '</ul></section>';
     $(".main-sidebar").html(sidebar);
     $('.user_local').text(m_nick);
@@ -136,6 +141,85 @@ function merchantLogin(){
             }
         });
         return false;
+    });
+}
+
+function settlement(){
+    $.ajax({
+        url: 'http://180.76.233.59/settlement/get',
+        type: 'post',
+        data: "merchant_id=" + localStorage.m_id,
+        dataType: 'json',
+        success: function (data) {
+            $('#totalPrice').val(data.data.price);
+            var table = $("tbody")[0];
+            var settlements = data.data.settlement;//admins
+            for (var i = 0; i < settlements.length; i++) {
+                var tr = $("<tr></tr>");
+                tr.appendTo(table);
+                $("<td>" + settlements[i].price + "</td>").appendTo(tr);
+                $("<td>" + settlements[i].product + "</td>").appendTo(tr);
+                $("<td>" + settlements[i].category + "</td>").appendTo(tr);
+                $("<td>" + settlements[i].product_num + "</td>").appendTo(tr);
+                $("<td>" + settlements[i].time + "</td>").appendTo(tr);
+            }
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+
+    $.ajax({
+        url: 'http://180.76.233.59:81/category/list',
+        type: 'post',
+        dataType: 'json',
+        success: function (data) {
+            var select = $("#sel");
+            var category = data.data.categories;//admins
+            for (var i = 0; i < category.length; i++) {
+                $("<option value='" + category[i].id + "'>" + category[i].name + "</option>").appendTo(select);
+            }
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+
+     $('#from').datetimepicker();
+
+    $('#make').click(function(){
+        $('tbody').text('');
+        var dataJson = {};
+        dataJson.merchant_id = localStorage.m_id;
+        if ($('.from').val() != null && $('.from').val() != "" && $('.from').val() != undefined){
+            dataJson.data_from = $('.from').val();
+        }
+        if ($('#sel').val() != "全部品类"){
+            dataJson.category_id = $('#sel').val();
+        }
+        $.ajax({
+            url: 'http://180.76.233.59/settlement/get',
+            type: 'post',
+            data: dataJson,
+            dataType: 'json',
+            success: function (data) {
+                $('#totalPrice').val(data.data.price);
+                var table = $("tbody")[0];
+                var settlements = data.data.settlement;//admins
+                for (var i = 0; i < settlements.length; i++) {
+                    var tr = $("<tr></tr>");
+                    tr.appendTo(table);
+                    $("<td>" + settlements[i].price + "</td>").appendTo(tr);
+                    $("<td>" + settlements[i].product + "</td>").appendTo(tr);
+                    $("<td>" + settlements[i].category + "</td>").appendTo(tr);
+                    $("<td>" + settlements[i].product_num + "</td>").appendTo(tr);
+                    $("<td>" + settlements[i].time + "</td>").appendTo(tr);
+                }
+            },
+            error: function () {
+                alert("error");
+            }
+        });
     });
 }
 
