@@ -221,6 +221,10 @@ function settlement(){
             }
         });
     });
+
+    $('#download').click(function(){
+        window.location.href="http://180.76.233.59/download";
+    });
 }
 
 function notProductList() {
