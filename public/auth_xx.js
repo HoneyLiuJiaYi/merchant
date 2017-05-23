@@ -160,6 +160,12 @@ function settlement(){
                 $("<td>" + settlements[i].category + "</td>").appendTo(tr);
                 $("<td>" + settlements[i].product_num + "</td>").appendTo(tr);
                 $("<td>" + settlements[i].time + "</td>").appendTo(tr);
+                $("<td>" + settlements[i].order_id + "</td>").appendTo(tr);
+                if(settlements[i].is_settlement == 0){
+                    $('<td><button class="btn btn-danger btn-xs stop">已结算</button></td>').appendTo(tr);
+                }else{
+                    $('<td><button class="btn btn-danger btn-xs active">未结算</button></td>').appendTo(tr);
+                }
             }
         },
         error: function () {
@@ -222,6 +228,24 @@ function settlement(){
 
     $('#download').click(function(){
         window.location.href="http://180.76.233.59/download";
+    });
+
+    $('#withdraw').click(function(){
+        $.ajax({
+            url:'http://180.76.233.59/withdraw',
+            type:'post',
+            dataType: 'json',
+            data: "merchant_id=" + localStorage.m_id,
+            success:function(data){
+                if(data.status==0){
+                    alert("成功结算" +　data.data.price + "元");
+                    window.location.reload();
+                }
+            },
+            error:function(){
+                alert("error");
+            }
+        });
     });
 }
 
