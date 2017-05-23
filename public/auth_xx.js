@@ -9,8 +9,6 @@ $(function () {
         if (title != "享洗小组-工厂登录") {
             alert('请登录！');
             window.location.href = "./login.html";
-        } else {
-            merchantLogin();
         }
     }
     var m_id = localStorage.m_id;
@@ -99,49 +97,6 @@ $(function () {
     $('#logo1').attr('src', logo);
 });
 
-function addGood() {
-
-}
-
-function riderStationAdd() {
-
-}
-
-function merchantLogin(){
-    $('#submitButton').click(function(){
-        var url = hostMerchantUrl + '/login/create';
-        $.ajax({
-            cache: false,
-            type: "POST",
-            url:url,
-            data:$('#login_form').serialize(),// 你的formid
-            async: false,
-            error: function(request) {
-                alert("Connection error");
-            },
-            success: function(data) {
-                if (data.status=='0') {
-                    alert('登录成功');
-                    localStorage.m_id = data.data.merchant.id;
-                    localStorage.nick = data.data.merchant.nick;
-                    localStorage.mail = data.data.merchant.mail;
-                    localStorage.mobile = data.data.merchant.mobile;
-                    localStorage.rename = data.data.merchant.rename;
-                    localStorage.license = data.data.merchant.license;
-                    localStorage.comment = data.data.merchant.comment;
-                    localStorage.logo = data.data.merchant.logo;
-                    localStorage.card = data.data.merchant.card;
-                    localStorage.sex = data.data.merchant.sex;
-                    window.location.href = "./index.html";
-                }else{
-                    alert('用户名或密码错误！');
-                }
-            }
-        });
-        return false;
-    });
-}
-
 function settlement(){
     $.ajax({
         url: 'http://180.76.233.59/settlement/get',
@@ -218,6 +173,12 @@ function settlement(){
                     $("<td>" + settlements[i].category + "</td>").appendTo(tr);
                     $("<td>" + settlements[i].product_num + "</td>").appendTo(tr);
                     $("<td>" + settlements[i].time + "</td>").appendTo(tr);
+                    $("<td>" + settlements[i].order_id + "</td>").appendTo(tr);
+                    if(settlements[i].is_settlement == 0){
+                        $('<td><button class="btn btn-danger btn-xs stop">已结算</button></td>').appendTo(tr);
+                    }else{
+                        $('<td><button class="btn btn-danger btn-xs active">未结算</button></td>').appendTo(tr);
+                    }
                 }
             },
             error: function () {
@@ -466,7 +427,6 @@ function merchantLog() {
                     $('<td>' + logs[i].product_id + '</td>').appendTo(tr);
                     $('<td>' + logs[i].created_at + '</td>').appendTo(tr);
                     $('<td>' + logs[i].updated_at + '</td>').appendTo(tr);
-                    $('<td><button class="btn btn-danger btn-xs stop">详情</button></td>').appendTo(tr);
                 }
             }
         }
@@ -580,7 +540,6 @@ function goodList() {
                     $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
                     $('<td>' + products[i].created_at + '</td>').appendTo(tr);
                     $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
-                    $('<td><button class="btn btn-danger btn-xs stop">详情</button></td>').appendTo(tr);
                 }
             }
         }

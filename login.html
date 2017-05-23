@@ -69,6 +69,54 @@
 <link rel="stylesheet" type="text/css" href="./public/stylesheets"><script type="text/javascript" src="./public/javascript"></script>
 <script type="text/javascript">jQuery.noConflict(true);</script>
 
+<script>
+    function CheckMail(mail) {
+        var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (filter.test(mail)) return true;
+        else {
+            alert('您的电子邮件格式不正确');
+            return false;
+        }
+    }
+</script>
 
+<script>
+    $('#submitButton').click(function(){
+        var url = hostMerchantUrl + '/login/create';
+        var mail = $('input[name=input]').val();
+        if (CheckMail(mail) == false){
+            return;
+        }
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url:url,
+            data:$('#login_form').serialize(),// 你的formid
+            async: false,
+            error: function(request) {
+                alert("Connection error");
+            },
+            success: function(data) {
+                if (data.status=='0') {
+                    alert('登录成功');
+                    localStorage.m_id = data.data.merchant.id;
+                    localStorage.nick = data.data.merchant.nick;
+                    localStorage.mail = data.data.merchant.mail;
+                    localStorage.mobile = data.data.merchant.mobile;
+                    localStorage.rename = data.data.merchant.rename;
+                    localStorage.license = data.data.merchant.license;
+                    localStorage.comment = data.data.merchant.comment;
+                    localStorage.logo = data.data.merchant.logo;
+                    localStorage.card = data.data.merchant.card;
+                    localStorage.sex = data.data.merchant.sex;
+                    window.location.href = "./index.html";
+                }else{
+                    alert('用户名或密码错误！');
+                }
+            }
+        });
+        return false;
+    });
+</script>
 
 </body></html>
