@@ -229,7 +229,7 @@ function notProductList() {
                     tr.appendTo(tbody);
                     $('<td name="id">' + products[i].id + '</td>').appendTo(tr);
                     $('<td>' + products[i].name + '</td>').appendTo(tr);
-                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '" width="30" height="30"/></td>').appendTo(tr);
                     $('<td>' + products[i].created_at + '</td>').appendTo(tr);
                     $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
                     $('<td><input type="text" placeholder="价格" name="price"> <button class="btn btn-danger btn-xs stop" name="bind" >绑定</button></td>').appendTo(tr);
@@ -483,7 +483,7 @@ function myProductList() {
                     tr.appendTo(tbody);
                     $('<td name="id">' + products[i].id + '</td>').appendTo(tr);
                     $('<td>' + products[i].name + '</td>').appendTo(tr);
-                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '" width="30" height="30" /></td>').appendTo(tr);
                     $('<td>' + products[i].price + '</td>').appendTo(tr);
                     $('<td><button class="btn btn-danger btn-xs stop" name="unbind" >解绑</button></td>').appendTo(tr);
                 }
@@ -537,7 +537,7 @@ function goodList() {
                     tr.appendTo(tbody);
                     $('<td>' + products[i].id + '</td>').appendTo(tr);
                     $('<td>' + products[i].name + '</td>').appendTo(tr);
-                    $('<td><img src="' + products[i].logo + '"/></td>').appendTo(tr);
+                    $('<td><img src="' + products[i].logo + '" width="30" height="30" /></td>').appendTo(tr);
                     $('<td>' + products[i].created_at + '</td>').appendTo(tr);
                     $('<td>' + products[i].updated_at + '</td>').appendTo(tr);
                 }
