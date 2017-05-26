@@ -160,7 +160,6 @@
                 alert("Connection error");
             },
             success: function(data) {
-                alert(data.msg);
                 if (data.status=='0') {
                     alert("注册成功,请到邮箱进行验证后登录！");
                     window.location.href = "./login.html";
